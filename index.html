@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>
+    /* Switch to English layout before the page draws, if the visitor chose English */
+    try {
+      var l = new URLSearchParams(location.search).get("lang") || localStorage.getItem("sula-lang");
+      if (l === "en") { document.documentElement.lang = "en"; document.documentElement.dir = "ltr"; }
+    } catch (e) {}
+  </script>
+  <title data-i18n="title.home">Sula Products</title>
+  <meta name="description" content="" data-i18n-attr="content:desc.home">
+  <meta name="theme-color" content="#FFFAF8">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sula Products">
+  <meta property="og:title" content="Sula Products">
+  <meta property="og:image" content="images/site/hero.svg">
+  <meta property="og:locale" content="ar_OM">
+  <meta property="og:locale:alternate" content="en_US">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@600&family=Cormorant+Garamond:wght@600&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">انتقلي إلى المحتوى</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">
+        <span data-brand-name>Sula Products</span>
+        <small data-brand-tagline></small>
+      </a>
+      <nav class="main-nav" aria-label="القائمة الرئيسية" data-i18n-attr="aria-label:nav.label">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home" aria-current="page">الرئيسية</a></li>
+          <li><a href="products.html" data-i18n="nav.products">المنتجات</a></li>
+          <li><a href="cart.html"><span data-i18n="nav.cart">السلة</span> <span class="cart-count"><span data-cart-count>0</span><span class="visually-hidden" data-i18n="nav.items"> قطعة</span></span></a></li>
+          <li><button type="button" class="lang-toggle" data-lang-toggle data-i18n="lang.button" data-i18n-attr="aria-label:lang.aria">English</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" tabindex="-1">
+    <div id="notices" class="notice-stack" aria-live="polite"></div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-text rise">
+        <p class="eyebrow" data-brand-tagline></p>
+        <h1 id="hero-title" data-brand-name>Sula Products</h1>
+        <p id="hero-intro"></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="products.html"><span data-i18n="home.cta">تسوّقي المنتجات</span> <span class="arrow" aria-hidden="true"></span></a>
+        </div>
+      </div>
+      <div class="hero-media rise" style="--i: 2">
+        <img id="hero-image" src="images/site/hero.svg" alt="" width="1200" height="900" fetchpriority="high">
+        <span class="hero-chip" data-i18n="home.chip"></span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cat-title">
+      <div class="section-head">
+        <h2 id="cat-title" data-i18n="home.categories"></h2>
+      </div>
+      <ul id="category-list" class="category-grid"></ul>
+    </section>
+
+    <section class="section" aria-labelledby="steps-title">
+      <div class="section-head">
+        <h2 id="steps-title" data-i18n="home.steps"></h2>
+      </div>
+      <ol class="steps">
+        <li><div><strong data-i18n="home.step1.title"></strong><span data-i18n="home.step1.text"></span></div></li>
+        <li><div><strong data-i18n="home.step2.title"></strong><span data-i18n="home.step2.text"></span></div></li>
+        <li><div><strong data-i18n="home.step3.title"></strong><span data-i18n="home.step3.text"></span></div></li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="featured-title">
+      <div class="section-head">
+        <h2 id="featured-title" data-i18n="home.featured"></h2>
+        <a href="products.html" data-i18n="home.viewAll"></a>
+      </div>
+      <ul id="featured-list" class="product-grid">
+        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong data-brand-name>Sula Products</strong> · <span data-brand-tagline></span></p>
+      <p data-i18n="footer.orders"></p>
+      <p><a data-instagram-link href="https://www.instagram.com/sula__products/" target="_blank" rel="noopener">Instagram @sula__products</a></p>
+      <p class="muted">© <span data-year></span> Sula Products</p>
+    </div>
+  </footer>
+
+  <!-- i18n.js runs first (not deferred) so the text is translated before it shows -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/common.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+</body>
+</html>

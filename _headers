@@ -1,0 +1,8 @@
+# Cloudflare Pages headers. Product and settings files are always re-checked,
+# so price and stock changes show up straight after you publish.
+/data/*
+  Cache-Control: no-cache
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

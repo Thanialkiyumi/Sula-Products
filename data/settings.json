@@ -1,0 +1,40 @@
+{
+  "brandName": "Sula Products",
+  "brandTagline": "مكياج وهدايا في عُمان",
+  "brandTagline_en": "Makeup and gifts in Oman",
+  "intro": "أهلاً بك في Sula Products للمكياج والهدايا. تصفّحي المنتجات واختاري اللون المناسب، ثم أرسلي طلبك إلينا عبر واتساب لنؤكد لك التوفر والمبلغ النهائي.",
+  "intro_en": "Welcome to Sula Products for makeup and gifts. Browse the products, pick your shade, then send us your order on WhatsApp and we will confirm availability and the final total.",
+  "instagramUrl": "https://www.instagram.com/sula__products/",
+  "instagramHandle": "@sula__products",
+  "whatsappNumber": "96892567303",
+  "currencyLabel": "ر.ع.",
+  "currencyLabel_en": "OMR",
+  "maxQuantityPerItem": 10,
+  "delivery": {
+    "deliveryEnabled": true,
+    "pickupEnabled": true,
+    "deliveryFeeOMR": null,
+    "deliveryNote": "رسوم وموعد التوصيل تُؤكَّد معك عبر واتساب.",
+    "pickupNote": "موقع وموعد الاستلام يُؤكَّدان معك عبر واتساب.",
+    "deliveryNote_en": "Delivery fee and timing are confirmed with you on WhatsApp.",
+    "pickupNote_en": "Pickup location and time are confirmed with you on WhatsApp."
+  },
+  "areas": [
+    "مسقط",
+    "شمال الباطنة",
+    "جنوب الباطنة",
+    "الداخلية",
+    "الظاهرة",
+    "البريمي",
+    "شمال الشرقية",
+    "جنوب الشرقية",
+    "الوسطى",
+    "ظفار",
+    "مسندم"
+  ],
+  "heroImage": {
+    "src": "images/site/hero.svg",
+    "alt": "صورة توضيحية لمنتجات مكياج وعلبة هدية على خلفية وردية",
+    "alt_en": "Sample image of makeup products and a gift box on a pink background"
+  }
+}

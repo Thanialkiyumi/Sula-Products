@@ -7,149 +7,70 @@
   ],
   "products": [
     {
-      "id": "sample-lipstick",
-      "sample": true,
-      "name": "أحمر شفاه (منتج تجريبي)",
-      "name_en": "Lipstick (sample product)",
-      "category": "lips",
-      "description": "هذا وصف تجريبي. اكتبي هنا وصف المنتج الحقيقي: الملمس، الحجم، وطريقة الاستخدام.",
-      "description_en": "This is a sample description. Write the real product description here: texture, size and how to use it.",
-      "featured": true,
-      "optionLabel": "اللون",
-      "optionLabel_en": "Shade",
-      "images": [
-        {"src": "images/products/lipstick.svg", "alt": "صورة توضيحية لأحمر شفاه وردي بغطاء ذهبي", "alt_en": "Sample image of a pink lipstick with a gold case"},
-        {"src": "images/products/lipstick-open.svg", "alt": "صورة توضيحية لأحمر شفاه مفتوح", "alt_en": "Sample image of an open lipstick"}
-      ],
-      "variants": [
-        {"id": "sample-lipstick-rose", "shade": "وردي هادئ", "shade_en": "Soft rose", "swatch": "#C98A8F", "price": 3.500, "available": true},
-        {"id": "sample-lipstick-nude", "shade": "نود دافئ", "shade_en": "Warm nude", "swatch": "#B98068", "price": 3.500, "available": true},
-        {"id": "sample-lipstick-berry", "shade": "توتي", "shade_en": "Berry", "swatch": "#8E2F45", "price": 3.500, "available": false}
-      ]
-    },
-    {
-      "id": "sample-lip-gloss",
-      "sample": true,
-      "name": "ملمع شفاه (منتج تجريبي)",
-      "name_en": "Lip gloss (sample product)",
-      "category": "lips",
-      "description": "هذا وصف تجريبي. اكتبي هنا وصف المنتج الحقيقي.",
-      "description_en": "This is a sample description. Write the real product description here.",
-      "featured": false,
-      "optionLabel": "اللون",
-      "optionLabel_en": "Shade",
-      "images": [
-        {"src": "images/products/gloss.svg", "alt": "صورة توضيحية لعبوة ملمع شفاه", "alt_en": "Sample image of a lip gloss tube"}
-      ],
-      "variants": [
-        {"id": "sample-lip-gloss-clear", "shade": "شفاف", "shade_en": "Clear", "price": 2.750, "available": true},
-        {"id": "sample-lip-gloss-pink", "shade": "وردي لامع", "shade_en": "Shimmer pink", "swatch": "#E3A5B0", "price": 2.750, "available": true}
-      ]
-    },
-    {
-      "id": "sample-foundation",
-      "sample": true,
-      "name": "كريم أساس (منتج تجريبي)",
-      "name_en": "Foundation (sample product)",
+      "id": "sula-liquid-blush",
+      "name": "بلاشر سائل سولا بيوتي",
+      "name_en": "Sula Beauty Liquid Blush",
       "category": "face",
-      "description": "هذا وصف تجريبي. اكتبي هنا وصف المنتج الحقيقي ودرجات اللون المتوفرة.",
-      "description_en": "This is a sample description. Write the real product description and available shades here.",
-      "featured": true,
-      "optionLabel": "الدرجة",
-      "optionLabel_en": "Tone",
-      "images": [
-        {"src": "images/products/foundation.svg", "alt": "صورة توضيحية لعبوة كريم أساس زجاجية", "alt_en": "Sample image of a glass foundation bottle"}
-      ],
-      "variants": [
-        {"id": "sample-foundation-light", "shade": "فاتح", "shade_en": "Light", "swatch": "#EBC9AE", "price": 6.900, "available": true},
-        {"id": "sample-foundation-medium", "shade": "متوسط", "shade_en": "Medium", "swatch": "#D1A27F", "price": 6.900, "available": true},
-        {"id": "sample-foundation-tan", "shade": "حنطي", "shade_en": "Tan", "swatch": "#A87452", "price": 6.900, "available": true}
-      ]
-    },
-    {
-      "id": "sample-blush",
-      "sample": true,
-      "name": "أحمر خدود (منتج تجريبي)",
-      "name_en": "Blush (sample product)",
-      "category": "face",
-      "description": "هذا وصف تجريبي. اكتبي هنا وصف المنتج الحقيقي.",
-      "description_en": "This is a sample description. Write the real product description here.",
+      "description": "تركيبة سائلة خفيفة ومنتشرة، تندمج بسلاسة مع البشرة لتمنحك إشراقة تدوم طويلاً.",
+      "description_en": "A lightweight, viral liquid formula that blends seamlessly into the skin for a long-lasting, radiant glow.",
       "featured": true,
       "optionLabel": "اللون",
       "optionLabel_en": "Shade",
       "images": [
-        {"src": "images/products/blush.svg", "alt": "صورة توضيحية لعلبة أحمر خدود دائرية", "alt_en": "Sample image of a round blush compact"}
+        {"src": "images/products/blush.svg", "alt": "صورة توضيحية لبلاشر سائل سولا بيوتي", "alt_en": "Placeholder image for Sula Beauty Liquid Blush"}
       ],
       "variants": [
-        {"id": "sample-blush-peach", "shade": "خوخي", "shade_en": "Peach", "swatch": "#E7A08A", "price": 4.250, "available": true},
-        {"id": "sample-blush-rose", "shade": "وردي", "shade_en": "Rose", "swatch": "#D9848F", "price": 4.250, "available": true}
+        {"id": "sula-liquid-blush-girly", "shade": "Girly (وردي)", "shade_en": "Girly (rose)", "swatch": "#D9848F", "price": 3.500, "available": true},
+        {"id": "sula-liquid-blush-mango", "shade": "Mango (نود)", "shade_en": "Mango (nude)", "swatch": "#D9A07F", "price": 3.500, "available": true}
       ]
     },
     {
-      "id": "sample-mascara",
-      "sample": true,
-      "name": "ماسكارا (منتج تجريبي)",
-      "name_en": "Mascara (sample product)",
-      "category": "eyes",
-      "description": "هذا وصف تجريبي لمنتج بدون ألوان. اكتبي هنا وصف المنتج الحقيقي.",
-      "description_en": "This is a sample description for a product without shades. Write the real product description here.",
-      "featured": false,
-      "images": [
-        {"src": "images/products/mascara.svg", "alt": "صورة توضيحية لعبوة ماسكارا", "alt_en": "Sample image of a mascara tube"}
-      ],
-      "variants": [
-        {"id": "sample-mascara-default", "price": 3.900, "available": true}
-      ]
-    },
-    {
-      "id": "sample-eyeshadow-palette",
-      "sample": true,
-      "name": "باليت ظلال عيون (منتج تجريبي)",
-      "name_en": "Eyeshadow palette (sample product)",
-      "category": "eyes",
-      "description": "هذا وصف تجريبي. اكتبي هنا عدد الألوان والملمس وأي تفاصيل حقيقية.",
-      "description_en": "This is a sample description. Write the number of shades, the finish and other real details here.",
-      "featured": false,
-      "images": [
-        {"src": "images/products/palette.svg", "alt": "صورة توضيحية لباليت ظلال عيون بألوان وردية وبنية", "alt_en": "Sample image of an eyeshadow palette in pink and brown shades"}
-      ],
-      "variants": [
-        {"id": "sample-eyeshadow-palette-default", "price": 8.500, "available": true}
-      ]
-    },
-    {
-      "id": "sample-gift-box",
-      "sample": true,
-      "name": "صندوق هدية (منتج تجريبي)",
-      "name_en": "Gift box (sample product)",
-      "category": "gifts",
-      "description": "هذا وصف تجريبي لمنتج بخيارات حجم بدلاً من الألوان. اكتبي هنا محتوى الصندوق الحقيقي.",
-      "description_en": "This is a sample description for a product with sizes instead of shades. Write what is really inside the box here.",
+      "id": "sula-lip-gloss",
+      "name": "جلو ملمع الشفاه",
+      "name_en": "Sula Lip Gloss",
+      "category": "lips",
+      "description": "ملمع عالي اللمعان وغير لزج، يرطّب الشفاه ويمنحها لمسة لون شفافة.",
+      "description_en": "High-shine, non-sticky gloss that hydrates the lips while adding a sheer tint of color.",
       "featured": true,
-      "optionLabel": "الحجم",
-      "optionLabel_en": "Size",
+      "optionLabel": "اللون",
+      "optionLabel_en": "Shade",
       "images": [
-        {"src": "images/products/gift-box.svg", "alt": "صورة توضيحية لصندوق هدية وردي بشريطة", "alt_en": "Sample image of a pink gift box with a ribbon"}
+        {"src": "images/products/gloss.svg", "alt": "صورة توضيحية لملمع الشفاه", "alt_en": "Placeholder image for Sula Lip Gloss"}
       ],
       "variants": [
-        {"id": "sample-gift-box-small", "shade": "صغير", "shade_en": "Small", "price": 5.000, "available": true},
-        {"id": "sample-gift-box-large", "shade": "كبير", "shade_en": "Large", "price": 9.500, "available": true}
+        {"id": "sula-lip-gloss-rose", "shade": "وردي", "shade_en": "Rose", "swatch": "#D9848F", "price": 2.000, "available": true},
+        {"id": "sula-lip-gloss-berry", "shade": "توتي", "shade_en": "Berry", "swatch": "#8E2F45", "price": 2.000, "available": true},
+        {"id": "sula-lip-gloss-nude", "shade": "نود", "shade_en": "Nude", "swatch": "#C4917A", "price": 2.000, "available": false}
       ]
     },
     {
-      "id": "sample-gift-wrap",
-      "sample": true,
-      "name": "تغليف هدية (منتج تجريبي)",
-      "name_en": "Gift wrapping (sample product)",
-      "category": "gifts",
-      "description": "مثال على منتج غير متوفر حالياً. لا يمكن إضافته إلى السلة.",
-      "description_en": "An example of a product that is currently unavailable. It cannot be added to the cart.",
-      "featured": false,
+      "id": "sula-eyeliner-kohl",
+      "name": "كحل سائل ومحدد العيون",
+      "name_en": "Sula Liquid Eyeliner & Kohl",
+      "category": "eyes",
+      "description": "قلم كحل أسود عميق مقاوم للماء، مع طرف سائل دقيق جداً لإطلالات حادة تدوم طويلاً.",
+      "description_en": "Deep black, waterproof eyeliner pencil paired with an ultra-precise liquid tip for sharp, long-lasting looks.",
+      "featured": true,
       "images": [
-        {"src": "images/products/gift-wrap.svg", "alt": "صورة توضيحية لورق تغليف وشريطة", "alt_en": "Sample image of wrapping paper and a ribbon"}
+        {"src": "images/products/mascara.svg", "alt": "صورة توضيحية لكحل سائل ومحدد العيون", "alt_en": "Placeholder image for Sula Liquid Eyeliner & Kohl"}
       ],
       "variants": [
-        {"id": "sample-gift-wrap-default", "price": 1.000, "available": false}
+        {"id": "sula-eyeliner-kohl-default", "price": 2.500, "available": true}
+      ]
+    },
+    {
+      "id": "sula-gift-box",
+      "name": "بوكس هدايا سولا المتكامل",
+      "name_en": "Sula All-in-One Gift Box",
+      "category": "gifts",
+      "description": "بوكس جمال مختار من 13 قطعة، يضم روتيناً متكاملاً للوجه والشفاه والعيون، مغلّف بشكل أنيق للإهداء.",
+      "description_en": "A curated 13-piece beauty box featuring a complete routine of face, lip, and eye essentials beautifully wrapped for gifting.",
+      "featured": true,
+      "images": [
+        {"src": "images/products/gift-box.svg", "alt": "صورة توضيحية لبوكس هدايا سولا", "alt_en": "Placeholder image for the Sula All-in-One Gift Box"}
+      ],
+      "variants": [
+        {"id": "sula-gift-box-default", "price": 15.000, "available": true}
       ]
     }
   ]

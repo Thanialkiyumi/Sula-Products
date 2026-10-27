@@ -53,13 +53,29 @@
         <h1 id="hero-title" data-brand-name>Sula Products</h1>
         <p id="hero-intro"></p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="products.html"><span data-i18n="home.cta">تسوّقي المنتجات</span> <span class="arrow" aria-hidden="true"></span></a>
+          <a class="btn btn-primary btn-lg" href="products.html"><span data-i18n="home.cta">تسوّقي المنتجات</span> <span class="arrow" aria-hidden="true"></span></a>
+          <a class="btn btn-secondary btn-lg" href="#steps-title" data-i18n="home.ctaSecondary">طريقة الطلب</a>
         </div>
       </div>
       <div class="hero-media rise" style="--i: 2">
+        <!-- Filled with the featured products by home.js; the image below shows if there are none -->
+        <ul id="hero-showcase" class="hero-showcase" data-i18n-attr="aria-label:home.showcase" hidden></ul>
         <img id="hero-image" src="images/site/hero.svg" alt="" width="1200" height="900" fetchpriority="high">
         <span class="hero-chip" data-i18n="home.chip"></span>
       </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-title">
+      <div class="section-head">
+        <h2 id="featured-title" data-i18n="home.featured"></h2>
+        <a href="products.html" data-i18n="home.viewAll"></a>
+      </div>
+      <ul id="featured-list" class="product-grid">
+        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+      </ul>
     </section>
 
     <section class="section" aria-labelledby="cat-title">
@@ -78,19 +94,6 @@
         <li><div><strong data-i18n="home.step2.title"></strong><span data-i18n="home.step2.text"></span></div></li>
         <li><div><strong data-i18n="home.step3.title"></strong><span data-i18n="home.step3.text"></span></div></li>
       </ol>
-    </section>
-
-    <section class="section" aria-labelledby="featured-title">
-      <div class="section-head">
-        <h2 id="featured-title" data-i18n="home.featured"></h2>
-        <a href="products.html" data-i18n="home.viewAll"></a>
-      </div>
-      <ul id="featured-list" class="product-grid">
-        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
-        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
-        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
-        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
-      </ul>
     </section>
   </main>
 

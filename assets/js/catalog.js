@@ -6,6 +6,7 @@
 
   S.boot().then(function (data) {
     var catalog = data.catalog;
+    var shop = { cart: data.cart, settings: data.settings };
     var params = new URLSearchParams(location.search);
     var activeCategory = params.get("category") || "";
     if (activeCategory && !catalog.categories.some(function (c) { return c.id === activeCategory; })) activeCategory = "";
@@ -58,7 +59,7 @@
       });
 
       list.textContent = "";
-      results.forEach(function (p, i) { list.appendChild(S.productCard(p, i)); });
+      results.forEach(function (p, i) { list.appendChild(S.productCard(p, i, shop)); });
       noResults.hidden = results.length > 0;
       count.textContent = results.length === 0 ? S.t("catalog.noResults") : (S.lang === "en" ? S.countText(results.length) : S.t("catalog.count", { n: results.length }));
       if (fromUser) updateUrl();

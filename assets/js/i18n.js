@@ -33,6 +33,8 @@
       "desc.404": "الصفحة غير موجودة.",
 
       "home.cta": "تسوّقي المنتجات",
+      "home.ctaSecondary": "طريقة الطلب",
+      "home.showcase": "منتجات Sula",
       "home.chip": "الطلب عبر واتساب",
       "home.categories": "الأقسام",
       "home.steps": "طريقة الطلب",
@@ -51,6 +53,7 @@
       "count.many": "{n} منتجاً",
 
       "catalog.title": "المنتجات",
+      "catalog.subtitle": "اختاري المنتج واللون، ثم أرسلي طلبك عبر واتساب.",
       "catalog.search": "ابحثي عن منتج أو لون",
       "catalog.placeholder": "مثال: أحمر شفاه، وردي",
       "catalog.filter": "تصفية حسب القسم",
@@ -64,6 +67,10 @@
       "card.out": "غير متوفر",
       "card.noPrice": "السعر غير متوفر",
       "card.options": "{n} خيارات",
+      "card.choose": "اختاري {label}",
+      "card.view": "عرض المنتج",
+      "card.addAria": "أضيفي {item} إلى السلة",
+      "card.added": "✓ تمت الإضافة",
       "price.from": "من ",
 
       "crumb.label": "مسار التصفح",
@@ -191,6 +198,8 @@
       "desc.404": "Page not found.",
 
       "home.cta": "Shop products",
+      "home.ctaSecondary": "How to order",
+      "home.showcase": "Sula products",
       "home.chip": "Order on WhatsApp",
       "home.categories": "Categories",
       "home.steps": "How to order",
@@ -209,6 +218,7 @@
       "count.many": "{n} products",
 
       "catalog.title": "Products",
+      "catalog.subtitle": "Pick a product and shade, then send your order on WhatsApp.",
       "catalog.search": "Search for a product or shade",
       "catalog.placeholder": "e.g. lipstick, pink",
       "catalog.filter": "Filter by category",
@@ -222,6 +232,10 @@
       "card.out": "Unavailable",
       "card.noPrice": "Price unavailable",
       "card.options": "{n} options",
+      "card.choose": "Choose a {label}",
+      "card.view": "View product",
+      "card.addAria": "Add {item} to cart",
+      "card.added": "✓ Added",
       "price.from": "From ",
 
       "crumb.label": "Breadcrumb",

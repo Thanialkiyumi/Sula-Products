@@ -3,6 +3,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "sula-products",
   "compatibility_date": "2026-10-23",
+  // Turns on the free address sula-products.thanialkiyumi.workers.dev
+  "workers_dev": true,
   "observability": { "enabled": true },
   "assets": {
     // The whole folder is the website (there is no build step)

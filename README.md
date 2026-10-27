@@ -41,7 +41,9 @@ sula-products/
 ├── cart.html             Cart, checkout form and WhatsApp button
 ├── 404.html              "Page not found"
 ├── favicon.svg           Small icon in the browser tab
-├── _headers              Cloudflare Pages settings (keeps prices fresh)
+├── _headers              Cloudflare settings (keeps prices fresh)
+├── wrangler.jsonc        Cloudflare settings for the live site (do not edit)
+├── .assetsignore         Files kept off the live site (like this guide)
 ├── robots.txt            Lets search engines read the site
 ├── data/
 │   ├── products.json     ← ALL products, shades, prices, stock (you edit this)
@@ -252,7 +254,7 @@ The site has a language button in the header (English / العربية). Arabic 
 2. Click **+** → **New repository**. Name it `sula-products`, choose **Private** or Public, and click **Create repository**.
 3. Tell me the repository name and I can upload the code for you. Or do it yourself: on the empty repository page click **uploading an existing file**, drag in **everything inside** the `sula-products` folder (not the folder itself), and click **Commit changes**.
 
-## 7. Publish on Cloudflare Pages (first time)
+## 7. Publish on Cloudflare (first time)
 
 1. Create a free account on [dash.cloudflare.com](https://dash.cloudflare.com).
 2. Go to **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.

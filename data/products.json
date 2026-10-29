@@ -72,6 +72,134 @@
       "variants": [
         {"id": "sula-gift-box-default", "price": 15.000, "available": true}
       ]
+    },
+    {
+      "id": "sheglam-mascara",
+      "name": "ماسكارا SHEGLAM",
+      "name_en": "SHEGLAM Mascara",
+      "category": "eyes",
+      "description": "ماسكارا من SHEGLAM.",
+      "description_en": "Mascara by SHEGLAM.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/sheglam-mascara.jpg", "alt": "علب ماسكارا SHEGLAM باللون النعناعي", "alt_en": "Mint SHEGLAM mascara boxes"}
+      ],
+      "variants": [
+        {"id": "sheglam-mascara-default", "price": 1.800, "available": true}
+      ]
+    },
+    {
+      "id": "rose-berry-essentials-kit",
+      "name": "طقم Rose Berry لأساسيات المكياج",
+      "name_en": "Rose Berry Makeup Essentials Kit",
+      "category": "gifts",
+      "description": "طقم يضم ماسكارا وأحمر شفاه وأحمر خدود.",
+      "description_en": "A kit with mascara, lipstick and blush.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/rose-berry-essentials-kit.jpg", "alt": "علبة طقم Rose Berry مع ماسكارا وأحمر شفاه وأحمر خدود", "alt_en": "Rose Berry kit box with mascara, lipstick and blush"}
+      ],
+      "variants": [
+        {"id": "rose-berry-essentials-kit-default", "price": 5.800, "available": true}
+      ]
+    },
+    {
+      "id": "imagic-pro-colors-palette",
+      "name": "باليت Imagic Pro Colors",
+      "name_en": "Imagic Pro Colors Palette",
+      "category": "eyes",
+      "description": "باليت مكياج متعددة الألوان من Imagic Pro Colors.",
+      "description_en": "A multi-color makeup palette by Imagic Pro Colors.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/imagic-pro-colors-palette.jpg", "alt": "باليت Imagic Pro Colors مفتوحة بألوان متعددة ومرآة", "alt_en": "Open Imagic Pro Colors palette with many shades and a mirror"}
+      ],
+      "variants": [
+        {"id": "imagic-pro-colors-palette-default", "price": 8.000, "available": true}
+      ]
+    },
+    {
+      "id": "mufe-ultra-hd-face-palette",
+      "name": "باليت Make Up For Ever Ultra HD لأساسيات الوجه",
+      "name_en": "Make Up For Ever Ultra HD Face Essentials Palette",
+      "category": "face",
+      "description": "باليت Ultra HD لأساسيات الوجه من Make Up For Ever.",
+      "description_en": "Ultra HD Face Essentials palette by Make Up For Ever.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/mufe-ultra-hd-palette.jpg", "alt": "علبتا باليت Make Up For Ever Ultra HD لأساسيات الوجه", "alt_en": "Two boxed Make Up For Ever Ultra HD Face Essentials palettes"}
+      ],
+      "variants": [
+        {"id": "mufe-ultra-hd-face-palette-default", "price": null, "available": true}
+      ]
+    },
+    {
+      "id": "blush-compact",
+      "name": "أحمر خدود",
+      "name_en": "Blush Compact",
+      "category": "face",
+      "optionLabel": "الدرجة",
+      "optionLabel_en": "Shade",
+      "description": "أحمر خدود متوفر بثلاث درجات: 077 و001 و012.",
+      "description_en": "Blush available in three shades: 077, 001 and 012.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/blush-compact-trio.jpg", "alt": "ثلاث علب أحمر خدود مفتوحة بالدرجات 077 و001 و012", "alt_en": "Three open blush compacts in shades 077, 001 and 012"}
+      ],
+      "variants": [
+        {"id": "blush-compact-077", "shade": "077", "shade_en": "077", "swatch": "#F68861", "price": null, "available": true},
+        {"id": "blush-compact-001", "shade": "001", "shade_en": "001", "swatch": "#FDB9D9", "price": null, "available": true},
+        {"id": "blush-compact-012", "shade": "012", "shade_en": "012", "swatch": "#D95C6A", "price": null, "available": true}
+      ]
+    },
+    {
+      "id": "huda-beauty-foundation",
+      "name": "كريم أساس Huda Beauty",
+      "name_en": "Huda Beauty Foundation",
+      "category": "face",
+      "optionLabel": "الدرجة",
+      "optionLabel_en": "Shade",
+      "description": "كريم أساس من Huda Beauty من مجموعتي Stay Blur وEasy Blur.",
+      "description_en": "Huda Beauty foundation from the Stay Blur and Easy Blur ranges.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/huda-beauty-foundation.jpg", "alt": "خمس عبوات كريم أساس Huda Beauty Stay Blur وEasy Blur", "alt_en": "Five Huda Beauty Stay Blur and Easy Blur foundation bottles"}
+      ],
+      "variants": [
+        {"id": "huda-beauty-foundation-120", "shade": "Stay Blur 120#", "shade_en": "Stay Blur 120#", "swatch": "#D5A48B", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-150g", "shade": "Easy Blur Crème Brûlée 150G", "shade_en": "Easy Blur Crème Brûlée 150G", "swatch": "#DDB491", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-220n", "shade": "Easy Blur 220N", "shade_en": "Easy Blur 220N", "swatch": "#E3BA8E", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-100", "shade": "Stay Blur 100#", "shade_en": "Stay Blur 100#", "swatch": "#DCA88F", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-210b", "shade": "Easy Blur Chai 210B", "shade_en": "Easy Blur Chai 210B", "swatch": "#E2B78D", "price": null, "available": true}
+      ]
+    },
+    {
+      "id": "kiko-lip-gloss",
+      "name": "ملمع شفاه KIKO",
+      "name_en": "KIKO Lip Gloss",
+      "category": "lips",
+      "optionLabel": "الدرجة",
+      "optionLabel_en": "Shade",
+      "description": "ملمع شفاه من KIKO Milano متوفر بـ 12 درجة.",
+      "description_en": "KIKO Milano lip gloss in 12 shades.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/kiko-lip-gloss.jpg", "alt": "اثنا عشر ملمع شفاه KIKO بدرجات مرقّمة", "alt_en": "Twelve numbered KIKO lip gloss shades"}
+      ],
+      "variants": [
+        {"id": "kiko-lip-gloss-13", "shade": "13", "shade_en": "13", "swatch": "#C22334", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-18", "shade": "18", "shade_en": "18", "swatch": "#CA4E1F", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-07", "shade": "07", "shade_en": "07", "swatch": "#DF543E", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-20", "shade": "20", "shade_en": "20", "swatch": "#8B2508", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-31", "shade": "31", "shade_en": "31", "swatch": "#BD7F6C", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-10", "shade": "10", "shade_en": "10", "swatch": "#A7031B", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-32", "shade": "32", "shade_en": "32", "swatch": "#B24021", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-19", "shade": "19", "shade_en": "19", "swatch": "#DC521D", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-05", "shade": "05", "shade_en": "05", "swatch": "#F6858A", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-22", "shade": "22", "shade_en": "22", "swatch": "#CF0D03", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-21", "shade": "21", "shade_en": "21", "swatch": "#8C3021", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-04", "shade": "04", "shade_en": "04", "swatch": "#E77156", "price": null, "available": true}
+      ]
     }
   ]
 }

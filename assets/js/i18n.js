@@ -65,6 +65,8 @@
       "card.noPrice": "السعر غير متوفر",
       "card.options": "{n} خيارات",
       "price.from": "من ",
+      "price.tbc": "السعر يُحدد لاحقاً",
+      "product.tbcNote": "هذا المنتج للعرض فقط حالياً، وسيتوفر للطلب بعد تحديد سعره.",
 
       "crumb.label": "مسار التصفح",
       "product.notFound": "المنتج غير موجود",
@@ -97,6 +99,7 @@
       "notice.price": "تغيّر سعر «{item}» من {old} إلى {new}، والسلة تعرض السعر الحالي.",
       "notice.max": "الحد الأقصى لـ«{item}» هو {max} قطع في الطلب الواحد، فتم تعديل الكمية.",
       "notice.unknownItem": "منتج",
+      "notice.tbc": "سعر «{item}» لم يُحدد بعد، فتمت إزالته من السلة.",
       "load.error": "تعذّر تحميل المنتجات. ",
       "load.retry": "حدّثي الصفحة أو حاولي لاحقاً.",
       "load.file": "ملاحظة للمسؤولة: افتحي الموقع عبر خادم محلي (مثل python -m http.server) وليس بالنقر المزدوج على الملف، لأن المتصفح يمنع قراءة ملفات JSON بهذه الطريقة.",
@@ -223,6 +226,8 @@
       "card.noPrice": "Price unavailable",
       "card.options": "{n} options",
       "price.from": "From ",
+      "price.tbc": "Price to be confirmed",
+      "product.tbcNote": "This product is for display only for now. You can order it once its price is set.",
 
       "crumb.label": "Breadcrumb",
       "product.notFound": "Product not found",
@@ -255,6 +260,7 @@
       "notice.price": "The price of “{item}” changed from {old} to {new}. Your cart shows the current price.",
       "notice.max": "The limit for “{item}” is {max} per order, so the quantity was adjusted.",
       "notice.unknownItem": "Item",
+      "notice.tbc": "The price of “{item}” is not set yet, so it was removed from your cart.",
       "load.error": "Products could not be loaded. ",
       "load.retry": "Refresh the page or try again later.",
       "load.file": "Note for the site owner: open the site through a local server (for example python -m http.server), not by double-clicking the file. Browsers block JSON files opened that way.",

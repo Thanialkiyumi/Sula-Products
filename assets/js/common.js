@@ -117,8 +117,10 @@
         var vid = cleanText(v && v.id);
         if (!vid) { console.warn("products.json: variant #" + (vIndex + 1) + " of \"" + id + "\" has no id and was skipped."); return; }
         if (seenVariants[vid]) { console.warn("products.json: duplicate variant id \"" + vid + "\" was skipped."); return; }
-        var priceBaisa = toBaisa(v.price);
-        if (priceBaisa === null) console.warn("products.json: variant \"" + vid + "\" has an invalid price, so it is shown as unavailable.");
+        // "price": null means the price is not set yet: shown as "price to be confirmed", cannot be ordered
+        var priceTbc = v.price === null || v.price === undefined;
+        var priceBaisa = priceTbc ? null : toBaisa(v.price);
+        if (priceBaisa === null && !priceTbc) console.warn("products.json: variant \"" + vid + "\" has an invalid price, so it is shown as unavailable.");
         seenVariants[vid] = true;
         variants.push({
           id: vid,
@@ -126,6 +128,7 @@
           searchText: [v.id, v.shade, v.shade_en].join(" "),
           swatch: safeColor(v.swatch),
           priceBaisa: priceBaisa,
+          priceTbc: priceTbc,
           available: v.available === true && priceBaisa !== null
         });
       });
@@ -150,7 +153,8 @@
         searchText: [id, p.name, p.name_en, p.description, p.description_en].concat(variants.map(function (v) { return v.searchText; })).join(" "),
         images: images,
         variants: variants,
-        hasOptions: variants.length > 1 || variants.some(function (v) { return v.shade; })
+        hasOptions: variants.length > 1 || variants.some(function (v) { return v.shade; }),
+        priceTbc: variants.every(function (v) { return v.priceTbc; })
       });
     });
 
@@ -247,7 +251,7 @@
       }
       var p = found.product, v = found.variant;
       if (!v.available) {
-        notices.push(t("notice.unavailable", { item: itemLabel(p.name, v.shade) }));
+        notices.push(t(v.priceTbc ? "notice.tbc" : "notice.unavailable", { item: itemLabel(p.name, v.shade) }));
         changed = true;
         return;
       }
@@ -408,7 +412,9 @@
     var available = isAvailable(product);
     var swatches = product.variants.filter(function (v) { return v.swatch; }).slice(0, 5);
 
-    var priceNode = summary
+    var priceNode = product.priceTbc
+      ? el("span", { className: "muted price-tbc", text: t("price.tbc") })
+      : summary
       ? (summary.varies ? el("span", null, [t("price.from"), priceEl(summary.min)]) : priceEl(summary.min))
       : el("span", { className: "muted", text: t("card.noPrice") });
 
@@ -416,7 +422,7 @@
       el("div", { className: "thumb" }, [
         imageEl(product.images[0]),
         product.sample ? el("span", { className: "badge", text: t("card.sample") }) : null,
-        available ? null : el("span", { className: "badge badge-out", text: t("card.out") })
+        available || product.priceTbc ? null : el("span", { className: "badge badge-out", text: t("card.out") })
       ]),
       el("h3", null, [el("a", { href: productUrl(product), text: product.name })]),
       el("div", { className: "meta" }, [

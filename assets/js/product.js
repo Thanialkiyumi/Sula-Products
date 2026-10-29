@@ -95,7 +95,7 @@
             name: "variant",
             id: inputId,
             value: v.id,
-            disabled: !v.available,
+            disabled: !v.available && !v.priceTbc,
             checked: selected === v
           });
           input.addEventListener("change", function () {
@@ -187,7 +187,12 @@
       selectedName.textContent = selected ? (selected.shade || "") : t("product.notChosen");
 
       var anyAvailable = S.isAvailable(product);
-      if (!anyAvailable) {
+      if (product.priceTbc) {
+        // Shown for browsing only until the store sets a price
+        priceNode.textContent = t("price.tbc");
+        availabilityNode.className = "availability muted";
+        availabilityNode.textContent = t("product.tbcNote");
+      } else if (!anyAvailable) {
         availabilityNode.className = "availability is-out";
         availabilityNode.textContent = t("product.outOfStock");
       } else if (selected) {
@@ -199,7 +204,7 @@
       }
 
       addBtn.disabled = !anyAvailable;
-      addBtn.textContent = anyAvailable ? t("product.add") : t("product.outOfStock");
+      addBtn.textContent = anyAvailable ? t("product.add") : product.priceTbc ? t("price.tbc") : t("product.outOfStock");
       qtyInput.disabled = !anyAvailable;
       if (!anyAvailable) { minus.disabled = true; plus.disabled = true; }
     }

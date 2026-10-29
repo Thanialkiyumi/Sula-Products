@@ -185,7 +185,8 @@ Always keep a copy of the file before a big edit. JSON is strict: every item is 
 | `variants` | Every shade/size the customer can choose. |
 | variant `id` | Permanent unique code for this shade. Never reuse or change it. |
 | `shade` | Shade name shown to the customer. Leave it out for a product with no shades. |
-| `swatch` | Optional color circle, a hex color like `"#C98A8F"`. |
+| `swatch` | Optional color circle, a hex color like `"#C98A8F"`. When a customer picks the shade, the photo gets a soft glow in this color. |
+| `image` | Optional photo of this exact shade, for example `"images/products/gloss-berry.jpg"`. When a customer picks the shade, the main photo fades to it. |
 | `price` | Price in OMR, for example `3.500`. |
 | `available` | `true` or `false`. |
 
@@ -230,7 +231,8 @@ Set `"available": false` on all of its variants. The product shows "غير مت�
 * Use square photos (1:1), about 1200 × 1200 pixels, saved as `.jpg` or `.webp`, ideally under 300 KB. [squoosh.app](https://squoosh.app) shrinks photos for free.
 * Name files in English with no spaces, for example `rose-lipstick-1.jpg`.
 * Put them in `images/products/` and update the `src` in `products.json`.
-* The homepage image is set in `settings.json` under `heroImage` (a 4:3 photo looks best).
+* The top of the homepage shows the first 4 `featured` products as large photo tiles, so good product photos matter most there. The `heroImage` in `settings.json` (a 4:3 photo looks best) is only shown when no product is featured.
+* Products with a single option (no shades) get an "Add to cart" button right on the product card. Products with shades get a "Choose a shade" button that opens the product page.
 
 ### Add a category
 

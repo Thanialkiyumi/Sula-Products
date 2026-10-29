@@ -127,6 +127,8 @@
           shade: cleanText(I.pick(v, "shade")) || null,
           searchText: [v.id, v.shade, v.shade_en].join(" "),
           swatch: safeColor(v.swatch),
+          // Optional: a photo of this shade, e.g. "image": "images/products/gloss-berry.jpg"
+          image: v.image ? safeImageSrc(v.image) : null,
           priceBaisa: priceBaisa,
           priceTbc: priceTbc,
           available: v.available === true && priceBaisa !== null
@@ -343,11 +345,25 @@
       document.body.appendChild(toastNode);
     }
     toastNode.textContent = "";
-    toastNode.appendChild(el("span", { text: message }));
+    toastNode.appendChild(el("span", { className: "toast-icon", "aria-hidden": "true" }));
+    toastNode.appendChild(el("span", { className: "toast-text", text: message }));
     if (link) toastNode.appendChild(el("a", { href: link.href, text: link.text }));
     requestAnimationFrame(function () { toastNode.classList.add("is-visible"); });
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { toastNode.classList.remove("is-visible"); }, 4000);
+  }
+
+  /* ---------- "Added" confirmation on an add-to-cart button ---------- */
+  // The button turns green with a tick for a moment, then goes back to normal.
+  function flashAdded(button) {
+    if (!button.getAttribute("data-label")) button.setAttribute("data-label", button.textContent);
+    clearTimeout(button._addedTimer);
+    button.classList.add("is-added");
+    button.textContent = t("card.added");
+    button._addedTimer = setTimeout(function () {
+      button.classList.remove("is-added");
+      button.textContent = button.getAttribute("data-label");
+    }, 1800);
   }
 
   /* ---------- Header shadow once the page is scrolled ---------- */
@@ -406,8 +422,10 @@
     return img;
   }
 
-  // index (optional) staggers the entrance animation of cards in a grid
-  function productCard(product, index) {
+  // index (optional) staggers the entrance animation of cards in a grid.
+  // shop (optional) is { cart, settings }: products with a single option
+  // then get an "Add to cart" button right on the card.
+  function productCard(product, index, shop) {
     var summary = priceSummary(product);
     var available = isAvailable(product);
     var swatches = product.variants.filter(function (v) { return v.swatch; }).slice(0, 5);
@@ -418,20 +436,47 @@
       ? (summary.varies ? el("span", null, [t("price.from"), priceEl(summary.min)]) : priceEl(summary.min))
       : el("span", { className: "muted", text: t("card.noPrice") });
 
+    var action = null;
+    if (available && !product.hasOptions && shop) {
+      var variant = product.variants[0];
+      action = el("button", {
+        type: "button",
+        className: "btn btn-card",
+        "aria-label": t("card.addAria", { item: product.name }),
+        text: t("product.add")
+      });
+      action.addEventListener("click", function () {
+        var result = addToCart(shop.cart, product, variant, 1, shop.settings);
+        flashAdded(action);
+        toast(result.capped ? t("product.addedCapped", { max: shop.settings.maxQty }) : t("toast.added", { item: product.name }),
+          { href: "cart.html", text: t("product.viewCart") });
+      });
+    } else if (available) {
+      // The whole card already links to the product page; this is just a visual hint
+      action = el("span", { className: "btn btn-card btn-card-ghost", "aria-hidden": "true" }, [
+        product.hasOptions ? t("card.choose", { label: I.lang === "en" ? product.optionLabel.toLowerCase() : product.optionLabel }) : t("card.view"),
+        el("span", { className: "arrow" })
+      ]);
+    }
+
     return el("li", { className: "product-card rise", style: { "--i": String(Math.min(index || 0, 8)) } }, [
       el("div", { className: "thumb" }, [
         imageEl(product.images[0]),
         product.sample ? el("span", { className: "badge", text: t("card.sample") }) : null,
         available || product.priceTbc ? null : el("span", { className: "badge badge-out", text: t("card.out") })
       ]),
-      el("h3", null, [el("a", { href: productUrl(product), text: product.name })]),
-      el("div", { className: "meta" }, [
-        priceNode,
-        swatches.length
-          ? el("span", { className: "swatch-row", "aria-label": t("card.options", { n: product.variants.length }) }, swatches.map(function (v) {
-              return el("span", { className: "swatch-dot", style: { background: v.swatch }, "aria-hidden": "true" });
-            }))
-          : null
+      el("div", { className: "card-body" }, [
+        product.categoryName ? el("p", { className: "card-cat", text: product.categoryName }) : null,
+        el("h3", null, [el("a", { href: productUrl(product), text: product.name })]),
+        el("div", { className: "meta" }, [
+          el("span", { className: "card-price" }, [priceNode]),
+          swatches.length
+            ? el("span", { className: "swatch-row", role: "img", "aria-label": t("card.options", { n: product.variants.length }) }, swatches.map(function (v) {
+                return el("span", { className: "swatch-dot", style: { background: v.swatch }, "aria-hidden": "true" });
+              }))
+            : null
+        ]),
+        action
       ])
     ]);
   }
@@ -506,6 +551,7 @@
     priceEl: priceEl,
     boot: boot,
     toast: toast,
+    flashAdded: flashAdded,
     t: t,
     lang: I.lang,
     countText: I.countText,

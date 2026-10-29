@@ -34,32 +34,53 @@
 
     /* ----- Gallery ----- */
     var mainImg = S.imageEl(product.images[0], { loading: "eager", fetchpriority: "high" });
-    var gallery = el("div", { className: "gallery" }, [el("div", { className: "gallery-main" }, [mainImg])]);
+    var galleryMain = el("div", { className: "gallery-main" }, [mainImg]);
+    var gallery = el("div", { className: "gallery" }, [galleryMain]);
+    var thumbs = null;
+
+    // Fade out, swap the photo, fade back in once it has loaded
+    function showImage(img) {
+      if (mainImg.getAttribute("src") === img.src) return;
+      mainImg.classList.add("is-swapping");
+      setTimeout(function () {
+        mainImg.addEventListener("load", function shown() {
+          mainImg.removeEventListener("load", shown);
+          mainImg.classList.remove("is-swapping");
+        });
+        mainImg.src = img.src;
+        mainImg.alt = img.alt;
+        if (mainImg.complete) mainImg.classList.remove("is-swapping");
+      }, 180);
+      if (thumbs) {
+        thumbs.querySelectorAll("button").forEach(function (b) {
+          b.setAttribute("aria-current", String(b.getAttribute("data-src") === img.src));
+        });
+      }
+    }
+
+    // When a shade is picked: show its own photo if it has one, otherwise
+    // softly tint the photo background with the shade colour.
+    function showShade(v) {
+      if (v.swatch) galleryMain.style.setProperty("--shade", v.swatch);
+      galleryMain.classList.toggle("has-shade-photo", !!v.image);
+      if (v.image) {
+        showImage({ src: v.image, alt: product.name + (v.shade ? " – " + v.shade : "") });
+      } else {
+        galleryMain.classList.remove("is-shading");
+        void galleryMain.offsetWidth; // restart the animation
+        galleryMain.classList.add("is-shading");
+      }
+    }
     if (product.images.length > 1) {
-      var thumbs = el("div", { className: "gallery-thumbs", role: "group", "aria-label": t("product.photos") });
+      thumbs = el("div", { className: "gallery-thumbs", role: "group", "aria-label": t("product.photos") });
       product.images.forEach(function (img, i) {
-        var btn = el("button", {
+        thumbs.appendChild(el("button", {
           type: "button",
+          "data-src": img.src,
           "aria-label": t("product.showPhoto", { i: i + 1, n: product.images.length }),
           "aria-current": i === 0 ? "true" : "false",
-          onclick: function () {
-            if (mainImg.getAttribute("src") === img.src) return;
-            // Fade out, swap the photo, fade back in once it has loaded
-            mainImg.classList.add("is-swapping");
-            setTimeout(function () {
-              mainImg.addEventListener("load", function shown() {
-                mainImg.removeEventListener("load", shown);
-                mainImg.classList.remove("is-swapping");
-              });
-              mainImg.src = img.src;
-              mainImg.alt = img.alt;
-              if (mainImg.complete) mainImg.classList.remove("is-swapping");
-            }, 180);
-            thumbs.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-current", "false"); });
-            btn.setAttribute("aria-current", "true");
-          }
-        }, [S.imageEl({ src: img.src, alt: "" }, { width: 136, height: 136 })]);
-        thumbs.appendChild(btn);
+          onclick: function () { showImage(img); }
+        }, [S.imageEl({ src: img.src, alt: "" }, { width: 136, height: 136 })]));
       });
       gallery.appendChild(thumbs);
     }
@@ -102,6 +123,7 @@
             selected = v;
             shadeError.hidden = true;
             statusMsg.textContent = "";
+            showShade(v);
             update();
           });
           return el("div", { className: "shade-option" }, [
@@ -150,6 +172,7 @@
       ])
     ]));
     info.appendChild(statusMsg);
+    info.appendChild(el("p", { className: "order-note", text: t("footer.orders") }));
 
     addBtn.addEventListener("click", function () {
       statusMsg.className = "status-msg";
@@ -174,6 +197,7 @@
         result.capped ? t("product.addedCapped", { max: settings.maxQty }) : t("product.added", { item: label })
       ));
       statusMsg.appendChild(el("a", { href: "cart.html", text: t("product.viewCart") }));
+      S.flashAdded(addBtn);
       S.toast(t("toast.added", { item: label }), { href: "cart.html", text: t("product.viewCart") });
     });
 
@@ -209,6 +233,8 @@
       if (!anyAvailable) { minus.disabled = true; plus.disabled = true; }
     }
 
+    if (selected && selected.swatch) galleryMain.style.setProperty("--shade", selected.swatch);
+    if (selected && selected.image) { mainImg.src = selected.image; galleryMain.classList.add("has-shade-photo"); }
     update();
     gallery.classList.add("rise");
     info.classList.add("rise");

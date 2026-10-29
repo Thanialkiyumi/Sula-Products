@@ -217,6 +217,10 @@ Edit `"price"` on the variant. Customers who already had the item in their cart 
 * Add: copy a variant line, give it a **new** `id`, and change the shade, swatch, and price.
 * Stop selling a shade: set `"available": false` (better than deleting it). It stays visible but cannot be added, and it is removed from carts with a message.
 
+### A product whose price is not set yet
+
+Write `"price": null` on its variants. The site shows «السعر يُحدد لاحقاً» / "Price to be confirmed", and customers can look at it but cannot add it to the cart. When the price is decided, replace `null` with the number, for example `"price": 4.500`.
+
 ### Mark a whole product as unavailable
 
 Set `"available": false` on all of its variants. The product shows "غير متوفر" and the button is disabled.

@@ -966,3 +966,22 @@ html[dir="ltr"] .cart-item.is-removing { transform: translateX(24px); }
   .logo small { display: none; }
 }
 .cart-side { display: grid; gap: 18px; }
+
+/* ---------- Real product photos (2026-11) ---------- */
+/* Every card photo is cropped to the same centred square on the studio-cream
+   background the owner's photos use, so the grid lines up neatly. */
+.product-card .thumb { background: #FDF5EE; }
+.product-card img { object-position: center; }
+
+/* Shade samples: a real crop of the owner's photo when there is one */
+.swatch-dot.has-photo {
+  background-size: cover;
+  background-position: center;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+.product-card .swatch-dot { width: 16px; height: 16px; }
+.shade-option .swatch-dot { width: 28px; height: 28px; flex: none; }
+.shade-option label:has(.swatch-dot) { padding-inline-start: 6px; }
+
+/* "How to order" sits lower on the page now; keep its heading clear of the sticky header */
+#how-to-order { scroll-margin-top: 96px; }

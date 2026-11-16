@@ -107,7 +107,7 @@
           return el("div", { className: "shade-option" }, [
             input,
             el("label", { for: inputId }, [
-              v.swatch ? el("span", { className: "swatch-dot", style: { background: v.swatch }, "aria-hidden": "true" }) : null,
+              v.swatch || v.swatchImage ? S.swatchDot(v) : null,
               v.shade || v.id,
               v.available ? null : el("span", { className: "visually-hidden", text: t("product.unavailableSuffix") })
             ])

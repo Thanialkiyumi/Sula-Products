@@ -20,8 +20,8 @@
         {"src": "images/products/blush.svg", "alt": "صورة توضيحية لبلاشر سائل سولا بيوتي", "alt_en": "Placeholder image for Sula Beauty Liquid Blush"}
       ],
       "variants": [
-        {"id": "sula-liquid-blush-girly", "shade": "Girly (وردي)", "shade_en": "Girly (rose)", "swatch": "#D9848F", "price": 3.500, "available": true},
-        {"id": "sula-liquid-blush-mango", "shade": "Mango (نود)", "shade_en": "Mango (nude)", "swatch": "#D9A07F", "price": 3.500, "available": true}
+        {"id": "sula-liquid-blush-girly", "shade": "Girly (وردي)", "shade_en": "Girly (rose)", "price": 3.500, "available": true},
+        {"id": "sula-liquid-blush-mango", "shade": "Mango (نود)", "shade_en": "Mango (nude)", "price": 3.500, "available": true}
       ]
     },
     {
@@ -38,9 +38,9 @@
         {"src": "images/products/gloss.svg", "alt": "صورة توضيحية لملمع الشفاه", "alt_en": "Placeholder image for Sula Lip Gloss"}
       ],
       "variants": [
-        {"id": "sula-lip-gloss-rose", "shade": "وردي", "shade_en": "Rose", "swatch": "#D9848F", "price": 2.000, "available": true},
-        {"id": "sula-lip-gloss-berry", "shade": "توتي", "shade_en": "Berry", "swatch": "#8E2F45", "price": 2.000, "available": true},
-        {"id": "sula-lip-gloss-nude", "shade": "نود", "shade_en": "Nude", "swatch": "#C4917A", "price": 2.000, "available": false}
+        {"id": "sula-lip-gloss-rose", "shade": "وردي", "shade_en": "Rose", "price": 2.000, "available": true},
+        {"id": "sula-lip-gloss-berry", "shade": "توتي", "shade_en": "Berry", "price": 2.000, "available": true},
+        {"id": "sula-lip-gloss-nude", "shade": "نود", "shade_en": "Nude", "price": 2.000, "available": false}
       ]
     },
     {
@@ -80,7 +80,7 @@
       "category": "eyes",
       "description": "ماسكارا من SHEGLAM.",
       "description_en": "Mascara by SHEGLAM.",
-      "featured": false,
+      "featured": true,
       "images": [
         {"src": "images/products/sheglam-mascara.jpg", "alt": "علب ماسكارا SHEGLAM باللون النعناعي", "alt_en": "Mint SHEGLAM mascara boxes"}
       ],
@@ -95,7 +95,7 @@
       "category": "gifts",
       "description": "طقم يضم ماسكارا وأحمر شفاه وأحمر خدود.",
       "description_en": "A kit with mascara, lipstick and blush.",
-      "featured": false,
+      "featured": true,
       "images": [
         {"src": "images/products/rose-berry-essentials-kit.jpg", "alt": "علبة طقم Rose Berry مع ماسكارا وأحمر شفاه وأحمر خدود", "alt_en": "Rose Berry kit box with mascara, lipstick and blush"}
       ],
@@ -110,7 +110,7 @@
       "category": "eyes",
       "description": "باليت مكياج متعددة الألوان من Imagic Pro Colors.",
       "description_en": "A multi-color makeup palette by Imagic Pro Colors.",
-      "featured": false,
+      "featured": true,
       "images": [
         {"src": "images/products/imagic-pro-colors-palette.jpg", "alt": "باليت Imagic Pro Colors مفتوحة بألوان متعددة ومرآة", "alt_en": "Open Imagic Pro Colors palette with many shades and a mirror"}
       ],
@@ -147,9 +147,9 @@
         {"src": "images/products/blush-compact-trio.jpg", "alt": "ثلاث علب أحمر خدود مفتوحة بالدرجات 077 و001 و012", "alt_en": "Three open blush compacts in shades 077, 001 and 012"}
       ],
       "variants": [
-        {"id": "blush-compact-077", "shade": "077", "shade_en": "077", "swatch": "#F68861", "price": null, "available": true},
-        {"id": "blush-compact-001", "shade": "001", "shade_en": "001", "swatch": "#FDB9D9", "price": null, "available": true},
-        {"id": "blush-compact-012", "shade": "012", "shade_en": "012", "swatch": "#D95C6A", "price": null, "available": true}
+        {"id": "blush-compact-077", "shade": "077", "shade_en": "077", "swatch": "#F68861", "swatchImage": "images/products/swatches/blush-compact-077.jpg", "price": null, "available": true},
+        {"id": "blush-compact-001", "shade": "001", "shade_en": "001", "swatch": "#FDB9D9", "swatchImage": "images/products/swatches/blush-compact-001.jpg", "price": null, "available": true},
+        {"id": "blush-compact-012", "shade": "012", "shade_en": "012", "swatch": "#D95C6A", "swatchImage": "images/products/swatches/blush-compact-012.jpg", "price": null, "available": true}
       ]
     },
     {
@@ -166,11 +166,11 @@
         {"src": "images/products/huda-beauty-foundation.jpg", "alt": "خمس عبوات كريم أساس Huda Beauty Stay Blur وEasy Blur", "alt_en": "Five Huda Beauty Stay Blur and Easy Blur foundation bottles"}
       ],
       "variants": [
-        {"id": "huda-beauty-foundation-120", "shade": "Stay Blur 120#", "shade_en": "Stay Blur 120#", "swatch": "#D5A48B", "price": null, "available": true},
-        {"id": "huda-beauty-foundation-150g", "shade": "Easy Blur Crème Brûlée 150G", "shade_en": "Easy Blur Crème Brûlée 150G", "swatch": "#DDB491", "price": null, "available": true},
-        {"id": "huda-beauty-foundation-220n", "shade": "Easy Blur Custard 220N", "shade_en": "Easy Blur Custard 220N", "swatch": "#E3BA8E", "price": null, "available": true},
-        {"id": "huda-beauty-foundation-100", "shade": "Stay Blur 100#", "shade_en": "Stay Blur 100#", "swatch": "#DCA88F", "price": null, "available": true},
-        {"id": "huda-beauty-foundation-210b", "shade": "Easy Blur Chai 210B", "shade_en": "Easy Blur Chai 210B", "swatch": "#E2B78D", "price": null, "available": true}
+        {"id": "huda-beauty-foundation-120", "shade": "Stay Blur 120#", "shade_en": "Stay Blur 120#", "swatch": "#D5A48B", "swatchImage": "images/products/swatches/huda-beauty-foundation-120.jpg", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-150g", "shade": "Easy Blur Crème Brûlée 150G", "shade_en": "Easy Blur Crème Brûlée 150G", "swatch": "#DDB491", "swatchImage": "images/products/swatches/huda-beauty-foundation-150g.jpg", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-220n", "shade": "Easy Blur Custard 220N", "shade_en": "Easy Blur Custard 220N", "swatch": "#E3BA8E", "swatchImage": "images/products/swatches/huda-beauty-foundation-220n.jpg", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-100", "shade": "Stay Blur 100#", "shade_en": "Stay Blur 100#", "swatch": "#DCA88F", "swatchImage": "images/products/swatches/huda-beauty-foundation-100.jpg", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-210b", "shade": "Easy Blur Chai 210B", "shade_en": "Easy Blur Chai 210B", "swatch": "#E2B78D", "swatchImage": "images/products/swatches/huda-beauty-foundation-210b.jpg", "price": null, "available": true}
       ]
     },
     {
@@ -182,23 +182,23 @@
       "optionLabel_en": "Shade",
       "description": "ملمع شفاه من KIKO Milano متوفر بـ 12 درجة.",
       "description_en": "KIKO Milano lip gloss in 12 shades.",
-      "featured": false,
+      "featured": true,
       "images": [
         {"src": "images/products/kiko-lip-gloss.jpg", "alt": "اثنا عشر ملمع شفاه KIKO بدرجات مرقّمة", "alt_en": "Twelve numbered KIKO lip gloss shades"}
       ],
       "variants": [
-        {"id": "kiko-lip-gloss-13", "shade": "13", "shade_en": "13", "swatch": "#C22334", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-18", "shade": "18", "shade_en": "18", "swatch": "#CA4E1F", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-07", "shade": "07", "shade_en": "07", "swatch": "#DF543E", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-20", "shade": "20", "shade_en": "20", "swatch": "#8B2508", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-31", "shade": "31", "shade_en": "31", "swatch": "#BD7F6C", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-10", "shade": "10", "shade_en": "10", "swatch": "#A7031B", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-32", "shade": "32", "shade_en": "32", "swatch": "#B24021", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-19", "shade": "19", "shade_en": "19", "swatch": "#DC521D", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-05", "shade": "05", "shade_en": "05", "swatch": "#F6858A", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-22", "shade": "22", "shade_en": "22", "swatch": "#CF0D03", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-21", "shade": "21", "shade_en": "21", "swatch": "#8C3021", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-04", "shade": "04", "shade_en": "04", "swatch": "#E77156", "price": null, "available": true}
+        {"id": "kiko-lip-gloss-13", "shade": "13", "shade_en": "13", "swatch": "#C22334", "swatchImage": "images/products/swatches/kiko-lip-gloss-13.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-18", "shade": "18", "shade_en": "18", "swatch": "#CA4E1F", "swatchImage": "images/products/swatches/kiko-lip-gloss-18.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-07", "shade": "07", "shade_en": "07", "swatch": "#DF543E", "swatchImage": "images/products/swatches/kiko-lip-gloss-07.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-20", "shade": "20", "shade_en": "20", "swatch": "#8B2508", "swatchImage": "images/products/swatches/kiko-lip-gloss-20.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-31", "shade": "31", "shade_en": "31", "swatch": "#BD7F6C", "swatchImage": "images/products/swatches/kiko-lip-gloss-31.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-10", "shade": "10", "shade_en": "10", "swatch": "#A7031B", "swatchImage": "images/products/swatches/kiko-lip-gloss-10.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-32", "shade": "32", "shade_en": "32", "swatch": "#B24021", "swatchImage": "images/products/swatches/kiko-lip-gloss-32.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-19", "shade": "19", "shade_en": "19", "swatch": "#DC521D", "swatchImage": "images/products/swatches/kiko-lip-gloss-19.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-05", "shade": "05", "shade_en": "05", "swatch": "#F6858A", "swatchImage": "images/products/swatches/kiko-lip-gloss-05.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-22", "shade": "22", "shade_en": "22", "swatch": "#CF0D03", "swatchImage": "images/products/swatches/kiko-lip-gloss-22.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-21", "shade": "21", "shade_en": "21", "swatch": "#8C3021", "swatchImage": "images/products/swatches/kiko-lip-gloss-21.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-04", "shade": "04", "shade_en": "04", "swatch": "#E77156", "swatchImage": "images/products/swatches/kiko-lip-gloss-04.jpg", "price": null, "available": true}
       ]
     }
   ]

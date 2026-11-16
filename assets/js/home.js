@@ -1,4 +1,4 @@
-/* Homepage: intro text, categories and featured products. */
+/* Homepage: intro text, featured products and categories. */
 (function () {
   "use strict";
   var S = window.Sula;
@@ -27,6 +27,9 @@
 
     var featured = catalog.products.filter(function (p) { return p.featured; });
     if (!featured.length) featured = catalog.products.slice(0, 4);
+    // Products with a real photo come first; ones still showing a drawing go after them
+    function hasPhoto(p) { return !/\.svg$/i.test(p.images[0].src); }
+    featured = featured.filter(hasPhoto).concat(featured.filter(function (p) { return !hasPhoto(p); }));
     var list = document.getElementById("featured-list");
     list.textContent = ""; // remove the loading placeholders
     featured.slice(0, 8).forEach(function (p, i) { list.appendChild(S.productCard(p, i)); });

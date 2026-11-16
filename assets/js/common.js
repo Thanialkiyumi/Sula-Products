@@ -127,6 +127,8 @@
           shade: cleanText(I.pick(v, "shade")) || null,
           searchText: [v.id, v.shade, v.shade_en].join(" "),
           swatch: safeColor(v.swatch),
+          // Optional: a small photo of the real shade, cropped from the owner's product photo
+          swatchImage: v.swatchImage ? safeImageSrc(v.swatchImage) : null,
           priceBaisa: priceBaisa,
           priceTbc: priceTbc,
           available: v.available === true && priceBaisa !== null
@@ -406,11 +408,19 @@
     return img;
   }
 
+  // A round shade sample: the real shade photo when there is one, otherwise the colour
+  function swatchDot(v) {
+    var style = {};
+    if (v.swatch) style["background-color"] = v.swatch;
+    if (v.swatchImage) style["background-image"] = "url(\"" + v.swatchImage + "\")";
+    return el("span", { className: "swatch-dot" + (v.swatchImage ? " has-photo" : ""), style: style, "aria-hidden": "true" });
+  }
+
   // index (optional) staggers the entrance animation of cards in a grid
   function productCard(product, index) {
     var summary = priceSummary(product);
     var available = isAvailable(product);
-    var swatches = product.variants.filter(function (v) { return v.swatch; }).slice(0, 5);
+    var swatches = product.variants.filter(function (v) { return v.swatch || v.swatchImage; }).slice(0, 5);
 
     var priceNode = product.priceTbc
       ? el("span", { className: "muted price-tbc", text: t("price.tbc") })
@@ -429,7 +439,7 @@
         priceNode,
         swatches.length
           ? el("span", { className: "swatch-row", "aria-label": t("card.options", { n: product.variants.length }) }, swatches.map(function (v) {
-              return el("span", { className: "swatch-dot", style: { background: v.swatch }, "aria-hidden": "true" });
+              return swatchDot(v);
             }))
           : null
       ])
@@ -521,6 +531,7 @@
     priceSummary: priceSummary,
     isAvailable: isAvailable,
     imageEl: imageEl,
+    swatchDot: swatchDot,
     storageGet: storageGet,
     storageSet: storageSet,
     checkWhatsAppNumber: checkWhatsAppNumber

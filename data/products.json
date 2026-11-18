@@ -3,7 +3,8 @@
     { "id": "lips", "name": "الشفاه", "name_en": "Lips" },
     { "id": "face", "name": "الوجه", "name_en": "Face" },
     { "id": "eyes", "name": "العيون", "name_en": "Eyes" },
-    { "id": "gifts", "name": "الهدايا", "name_en": "Gifts" }
+    { "id": "gifts", "name": "الهدايا", "name_en": "Gifts" },
+    { "id": "tools", "name": "الفرش والأدوات", "name_en": "Brushes & tools" }
   ],
   "products": [
     {
@@ -199,6 +200,166 @@
         {"id": "kiko-lip-gloss-22", "shade": "22", "shade_en": "22", "swatch": "#CF0D03", "swatchImage": "images/products/swatches/kiko-lip-gloss-22.jpg", "price": null, "available": true},
         {"id": "kiko-lip-gloss-21", "shade": "21", "shade_en": "21", "swatch": "#8C3021", "swatchImage": "images/products/swatches/kiko-lip-gloss-21.jpg", "price": null, "available": true},
         {"id": "kiko-lip-gloss-04", "shade": "04", "shade_en": "04", "swatch": "#E77156", "swatchImage": "images/products/swatches/kiko-lip-gloss-04.jpg", "price": null, "available": true}
+      ]
+    },
+    {
+      "id": "huda-liquid-matte-mousse",
+      "status": "draft",
+      "name": "أحمر شفاه سائل مطفي موس",
+      "name_en": "Liquid Matte Mousse Lip Colour",
+      "category": "lips",
+      "description": "أحمر شفاه سائل بلمسة مطفية، مع مجموعة درجات ظاهرة في الصورة. اختاري درجتك بعد تأكيد الخيارات المتوفرة.",
+      "description_en": "Matte liquid lip colour, pictured in a range of shades. Select your shade once the available options are confirmed.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/huda-liquid-matte-mousse.jpg", "alt": "أحمر شفاه سائل مطفي موس", "alt_en": "Liquid Matte Mousse Lip Colour"}
+      ],
+      "variants": [
+        {"id": "huda-liquid-matte-mousse-default", "price": 2.500, "available": false}
+      ]
+    },
+    {
+      "id": "rare-luminous-blush",
+      "status": "draft",
+      "name": "بلاشر بودرة بلمسة مضيئة",
+      "name_en": "Luminous Powder Blush",
+      "category": "face",
+      "description": "بلاشر بودرة بلمسة مضيئة لإضافة لون للخدود. تظهر في الصورة درجات متعددة، وتُؤكَّد الخيارات المتوفرة قبل الطلب.",
+      "description_en": "Luminous powder blush for adding colour to the cheeks. Multiple shades are pictured; available options must be confirmed before ordering.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/rare-luminous-blush.jpg", "alt": "بلاشر بودرة بلمسة مضيئة", "alt_en": "Luminous Powder Blush"}
+      ],
+      "variants": [
+        {"id": "rare-luminous-blush-default", "price": 2.500, "available": false}
+      ]
+    },
+    {
+      "id": "daroge-eyeliner",
+      "status": "draft",
+      "name": "قلم كحل داروج",
+      "name_en": "Daroge Eyeliner Pencil",
+      "category": "eyes",
+      "description": "قلم كحل لتحديد العين. يذكر المنشور توفر ثلاثة ألوان؛ تُؤكَّد أسماء الألوان قبل الطلب.",
+      "description_en": "Eyeliner pencil for defining the eyes. The post mentions three colours; colour names need confirmation before ordering.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/daroge-eyeliner.jpg", "alt": "قلم كحل داروج", "alt_en": "Daroge Eyeliner Pencil"}
+      ],
+      "variants": [
+        {"id": "daroge-eyeliner-default", "price": 3.000, "available": false}
+      ]
+    },
+    {
+      "id": "superlasting-lip-duo",
+      "status": "draft",
+      "name": "أحمر شفاه ومحدد شفاه ٢ في ١",
+      "name_en": "Superlasting Lipstick & Liner Duo",
+      "category": "lips",
+      "description": "أحمر شفاه ومحدد شفاه في قلم واحد بطرفين، لتحديد الشفاه وإضافة اللون. الدرجات المتوفرة تُؤكَّد قبل الطلب.",
+      "description_en": "A dual-ended lipstick and lip liner in one pencil, for outlining lips and adding colour. Available shades need confirmation.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/superlasting-lip-duo.jpg", "alt": "أحمر شفاه ومحدد شفاه ٢ في ١", "alt_en": "Superlasting Lipstick & Liner Duo"}
+      ],
+      "variants": [
+        {"id": "superlasting-lip-duo-default", "price": 1.000, "available": false}
+      ]
+    },
+    {
+      "id": "benetint-lip-cheek",
+      "status": "draft",
+      "name": "تينت للشفاه والخدود",
+      "name_en": "Benetint Lip & Cheek Stain",
+      "category": "face",
+      "description": "تينت للشفاه والخدود لإضافة لمسة لون وردية. حجم العبوة والدرجة المتوفرة يُؤكَّدان قبل الطلب.",
+      "description_en": "A lip and cheek stain for a rosy touch of colour. Confirm the pack size and available shade before ordering.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/benetint-lip-cheek.jpg", "alt": "تينت للشفاه والخدود", "alt_en": "Benetint Lip & Cheek Stain"}
+      ],
+      "variants": [
+        {"id": "benetint-lip-cheek-default", "price": 1.000, "available": false}
+      ]
+    },
+    {
+      "id": "roseberry-brow-pen",
+      "status": "draft",
+      "name": "قلم تحديد الحواجب روز بيري",
+      "name_en": "Roseberry Brow Defining Pen",
+      "category": "eyes",
+      "description": "قلم لتحديد الحواجب ورسم خطوط دقيقة تشبه الشعيرات. الدرجة المتوفرة تُؤكَّد قبل الطلب.",
+      "description_en": "A brow defining pen for drawing fine, hair-like strokes. Confirm the available shade before ordering.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/roseberry-brow-pen.jpg", "alt": "قلم تحديد الحواجب روز بيري", "alt_en": "Roseberry Brow Defining Pen"}
+      ],
+      "variants": [
+        {"id": "roseberry-brow-pen-default", "price": 1.000, "available": false}
+      ]
+    },
+    {
+      "id": "angled-detail-brush",
+      "status": "draft",
+      "name": "فرشاة تحديد مائلة",
+      "name_en": "Angled Detail Brush",
+      "category": "tools",
+      "description": "فرشاة مكياج برأس صغير مائل للتحديد والعمل على التفاصيل، مع مقبض وردي.",
+      "description_en": "A makeup brush with a small angled head for definition and detail work, finished with a pink handle.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/angled-detail-brush.jpg", "alt": "فرشاة تحديد مائلة", "alt_en": "Angled Detail Brush"}
+      ],
+      "variants": [
+        {"id": "angled-detail-brush-default", "price": 1.000, "available": false}
+      ]
+    },
+    {
+      "id": "nose-contour-brush",
+      "status": "draft",
+      "name": "فرشاة تحديد الأنف",
+      "name_en": "Nose Contour Brush",
+      "category": "tools",
+      "description": "فرشاة لتوزيع ودمج الكونتور حول الأنف، بتصميم وردي.",
+      "description_en": "A pink-handled brush for applying and blending contour around the nose.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/nose-contour-brush.jpg", "alt": "فرشاة تحديد الأنف", "alt_en": "Nose Contour Brush"}
+      ],
+      "variants": [
+        {"id": "nose-contour-brush-default", "price": 1.000, "available": false}
+      ]
+    },
+    {
+      "id": "foundation-brush",
+      "status": "draft",
+      "name": "فرشاة توزيع الفاونديشن",
+      "name_en": "Foundation Brush",
+      "category": "tools",
+      "description": "فرشاة لتوزيع الفاونديشن ودمجه على الوجه، بتصميم وردي.",
+      "description_en": "A pink-handled brush for applying and blending foundation on the face.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/foundation-brush.jpg", "alt": "فرشاة توزيع الفاونديشن", "alt_en": "Foundation Brush"}
+      ],
+      "variants": [
+        {"id": "foundation-brush-default", "price": 1.000, "available": false}
+      ]
+    },
+    {
+      "id": "eyeshadow-blending-brush",
+      "status": "draft",
+      "name": "فرشاة دمج ظلال العيون",
+      "name_en": "Eyeshadow Blending Brush",
+      "category": "tools",
+      "description": "فرشاة برأس مستدير لدمج ظلال العيون وتنعيم الانتقالات بين الألوان، مع مقبض وردي.",
+      "description_en": "A rounded brush for blending eyeshadow and softening transitions between colours, with a pink handle.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/eyeshadow-blending-brush.jpg", "alt": "فرشاة دمج ظلال العيون", "alt_en": "Eyeshadow Blending Brush"}
+      ],
+      "variants": [
+        {"id": "eyeshadow-blending-brush-default", "price": 1.000, "available": false}
       ]
     }
   ]

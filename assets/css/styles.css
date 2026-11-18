@@ -985,3 +985,11 @@ html[dir="ltr"] .cart-item.is-removing { transform: translateX(24px); }
 
 /* "How to order" sits lower on the page now; keep its heading clear of the sticky header */
 #how-to-order { scroll-margin-top: 96px; }
+
+/* Show each photo whole inside the same square frame (portrait seller
+   photos are never cut off; square studio photos fill the frame as before) */
+.product-card img,
+.gallery-main img,
+.gallery-thumbs img { object-fit: contain; }
+.gallery-main { background: #FDF5EE; }
+.badge-draft { background: rgba(255, 255, 255, 0.95); color: var(--rose); border: 1px solid var(--blush-deep); }

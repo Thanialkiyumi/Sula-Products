@@ -187,7 +187,11 @@
       selectedName.textContent = selected ? (selected.shade || "") : t("product.notChosen");
 
       var anyAvailable = S.isAvailable(product);
-      if (product.priceTbc) {
+      if (product.draft) {
+        // Preview only: price shown from the seller's post, but ordering stays off
+        availabilityNode.className = "availability muted";
+        availabilityNode.textContent = t("product.draftNote");
+      } else if (product.priceTbc) {
         // Shown for browsing only until the store sets a price
         priceNode.textContent = t("price.tbc");
         availabilityNode.className = "availability muted";
@@ -204,7 +208,7 @@
       }
 
       addBtn.disabled = !anyAvailable;
-      addBtn.textContent = anyAvailable ? t("product.add") : product.priceTbc ? t("price.tbc") : t("product.outOfStock");
+      addBtn.textContent = anyAvailable ? t("product.add") : product.draft ? t("product.draftButton") : product.priceTbc ? t("price.tbc") : t("product.outOfStock");
       qtyInput.disabled = !anyAvailable;
       if (!anyAvailable) { minus.disabled = true; plus.disabled = true; }
     }

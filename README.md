@@ -186,6 +186,7 @@ Always keep a copy of the file before a big edit. JSON is strict: every item is 
 | variant `id` | Permanent unique code for this shade. Never reuse or change it. |
 | `shade` | Shade name shown to the customer. Leave it out for a product with no shades. |
 | `swatch` | Optional color circle, a hex color like `"#C98A8F"`. Only use a color taken from a real photo of the product. |
+| `status` | Optional. `"draft"` hides the product from shoppers until you remove this line. Drafts can be checked by opening any page with `?preview=1` at the end of the address (they show a "Preview only" label and can never be ordered). `?preview=0` turns preview off. When you publish a draft, also set `"available": true` on the shades that are in stock. |
 | `swatchImage` | Optional small photo of the real shade, like `"images/products/swatches/kiko-lip-gloss-13.jpg"`. A small square crop (about 96 × 96 pixels) of the shade from your own product photo. It shows in the circle instead of the color. |
 | `price` | Price in OMR, for example `3.500`. |
 | `available` | `true` or `false`. |

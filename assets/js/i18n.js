@@ -62,6 +62,7 @@
 
       "card.sample": "تجريبي",
       "card.out": "غير متوفر",
+      "card.draft": "معاينة فقط",
       "card.noPrice": "السعر غير متوفر",
       "card.options": "{n} خيارات",
       "price.from": "من ",
@@ -83,6 +84,8 @@
       "product.add": "أضيفي إلى السلة",
       "product.outOfStock": "غير متوفر حالياً",
       "product.inStock": "متوفر",
+      "product.draftNote": "معاينة فقط: هذا المنتج بانتظار تأكيد المتجر للسعر والدرجات والتوفر، ولا يمكن طلبه بعد.",
+      "product.draftButton": "غير متاح للطلب بعد",
       "product.choosePrompt": "اختاري {label} لمعرفة التوفر.",
       "product.chooseFirst": "يرجى اختيار {label} أولاً.",
       "product.optionOut": "هذا الخيار غير متوفر حالياً.",
@@ -92,6 +95,8 @@
       "toast.added": "أُضيف إلى السلة: {item}",
 
       "notice.sampleLabel": "تنبيه: ",
+      "notice.previewLabel": "وضع المعاينة: ",
+      "notice.preview": "تظهر المنتجات غير المنشورة بعلامة «معاينة فقط» ولا يمكن طلبها. للخروج افتحي الصفحة مع ",
       "notice.sample": "المنتجات المعروضة حالياً أمثلة تجريبية لتجربة الموقع، وليست مخزوناً فعلياً للمتجر.",
       "notice.cartUpdated": "تم تحديث سلتك حسب آخر الأسعار والتوفر:",
       "notice.gone": "لم يعد «{item}» موجوداً في المتجر، فتمت إزالته من السلة.",
@@ -223,6 +228,7 @@
 
       "card.sample": "Sample",
       "card.out": "Unavailable",
+      "card.draft": "Preview only",
       "card.noPrice": "Price unavailable",
       "card.options": "{n} options",
       "price.from": "From ",
@@ -244,6 +250,8 @@
       "product.add": "Add to cart",
       "product.outOfStock": "Currently unavailable",
       "product.inStock": "In stock",
+      "product.draftNote": "Preview only: this product is waiting for the store to confirm its price, shades and availability. It can't be ordered yet.",
+      "product.draftButton": "Not available to order yet",
       "product.choosePrompt": "Choose a {label} to see availability.",
       "product.chooseFirst": "Please choose a {label} first.",
       "product.optionOut": "This option is currently unavailable.",
@@ -253,6 +261,8 @@
       "toast.added": "Added to cart: {item}",
 
       "notice.sampleLabel": "Note: ",
+      "notice.previewLabel": "Preview mode: ",
+      "notice.preview": "Unpublished products are shown marked “Preview only” and can't be ordered. To leave, open the page with ",
       "notice.sample": "The products shown are samples for testing the website. They are not real store stock.",
       "notice.cartUpdated": "Your cart was updated to the latest prices and availability:",
       "notice.gone": "“{item}” is no longer in the store and was removed from your cart.",

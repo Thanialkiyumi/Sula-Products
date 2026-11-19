@@ -1591,3 +1591,14 @@ html[lang="en"] .footer-head { text-transform: uppercase; letter-spacing: 0.1em;
 .gallery-thumbs img { object-fit: contain; }
 .gallery-main { background: #FDF5EE; }
 .badge-draft { background: rgba(255, 255, 255, 0.95); color: var(--rose); border: 1px solid var(--blush-deep); }
+
+/* Category tiles: one centred row on wide screens, a swipeable row on phones */
+.category-tiles { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: none; }
+.category-tiles > li { width: 150px; }
+@media (max-width: 639px) {
+  .category-tiles { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; gap: 12px; scrollbar-width: none; padding-bottom: 4px; }
+  .category-tiles::-webkit-scrollbar { display: none; }
+  .category-tiles > li { flex: 0 0 84px; width: 84px; }
+}
+/* Footer: brand + two link columns side by side on wide screens */
+@media (min-width: 760px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }

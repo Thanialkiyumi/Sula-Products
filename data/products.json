@@ -86,7 +86,7 @@
         {"src": "images/products/sheglam-mascara.jpg", "alt": "علب ماسكارا SHEGLAM باللون النعناعي", "alt_en": "Mint SHEGLAM mascara boxes"}
       ],
       "variants": [
-        {"id": "sheglam-mascara-default", "price": 1.800, "available": true}
+        {"id": "sheglam-mascara-default", "price": 1.000, "available": true}
       ]
     },
     {
@@ -236,71 +236,70 @@
     },
     {
       "id": "daroge-eyeliner",
-      "status": "draft",
       "name": "قلم كحل داروج",
       "name_en": "Daroge Eyeliner Pencil",
       "category": "eyes",
-      "description": "قلم كحل لتحديد العين. يذكر المنشور توفر ثلاثة ألوان؛ تُؤكَّد أسماء الألوان قبل الطلب.",
-      "description_en": "Eyeliner pencil for defining the eyes. The post mentions three colours; colour names need confirmation before ordering.",
+      "description": "قلم كحل من داروج لتحديد العين، مقاوم للماء ولا يتلطخ. متوفر بثلاثة ألوان.",
+      "description_en": "Daroge eyeliner kohl pencil for defining the eyes, waterproof and smudge-proof. Available in three colours.",
       "featured": false,
       "images": [
         {"src": "images/products/daroge-eyeliner.jpg", "alt": "قلم كحل داروج", "alt_en": "Daroge Eyeliner Pencil"}
       ],
       "variants": [
-        {"id": "daroge-eyeliner-default", "price": 3.000, "available": false}
-      ]
+        {"id": "daroge-eyeliner-black", "shade": "أسود", "shade_en": "Black", "swatch": "#1A1A1A", "price": 3.000, "available": true},
+        {"id": "daroge-eyeliner-nude", "shade": "بيج", "shade_en": "Nude", "swatch": "#E2B07E", "price": 3.000, "available": true},
+        {"id": "daroge-eyeliner-white", "shade": "أبيض", "shade_en": "White", "swatch": "#F7F7F5", "price": 3.000, "available": true}
+      ],
+      "optionLabel": "اللون",
+      "optionLabel_en": "Colour"
     },
     {
       "id": "superlasting-lip-duo",
-      "status": "draft",
       "name": "أحمر شفاه ومحدد شفاه ٢ في ١",
       "name_en": "Superlasting Lipstick & Liner Duo",
       "category": "lips",
-      "description": "أحمر شفاه ومحدد شفاه في قلم واحد بطرفين، لتحديد الشفاه وإضافة اللون. الدرجات المتوفرة تُؤكَّد قبل الطلب.",
-      "description_en": "A dual-ended lipstick and lip liner in one pencil, for outlining lips and adding colour. Available shades need confirmation.",
+      "description": "أحمر شفاه ومحدد شفاه في قلم واحد بطرفين، لتحديد الشفاه وإضافة اللون. متوفر بعدة درجات، ونؤكد معك الدرجة عبر واتساب.",
+      "description_en": "A dual-ended lipstick and lip liner in one pencil, for outlining lips and adding colour. Comes in several shades; we confirm your shade with you on WhatsApp.",
       "featured": false,
       "images": [
         {"src": "images/products/superlasting-lip-duo.jpg", "alt": "أحمر شفاه ومحدد شفاه ٢ في ١", "alt_en": "Superlasting Lipstick & Liner Duo"}
       ],
       "variants": [
-        {"id": "superlasting-lip-duo-default", "price": 1.000, "available": false}
+        {"id": "superlasting-lip-duo-default", "price": 1.000, "available": true}
       ]
     },
     {
       "id": "benetint-lip-cheek",
-      "status": "draft",
       "name": "تينت للشفاه والخدود",
       "name_en": "Benetint Lip & Cheek Stain",
       "category": "face",
-      "description": "تينت للشفاه والخدود لإضافة لمسة لون وردية. حجم العبوة والدرجة المتوفرة يُؤكَّدان قبل الطلب.",
-      "description_en": "A lip and cheek stain for a rosy touch of colour. Confirm the pack size and available shade before ordering.",
+      "description": "تينت للشفاه والخدود لإضافة لمسة لون وردية طبيعية.",
+      "description_en": "A lip and cheek stain for a natural rosy touch of colour.",
       "featured": false,
       "images": [
         {"src": "images/products/benetint-lip-cheek.jpg", "alt": "تينت للشفاه والخدود", "alt_en": "Benetint Lip & Cheek Stain"}
       ],
       "variants": [
-        {"id": "benetint-lip-cheek-default", "price": 1.000, "available": false}
+        {"id": "benetint-lip-cheek-default", "price": 1.000, "available": true}
       ]
     },
     {
       "id": "roseberry-brow-pen",
-      "status": "draft",
       "name": "قلم تحديد الحواجب روز بيري",
       "name_en": "Roseberry Brow Defining Pen",
       "category": "eyes",
-      "description": "قلم لتحديد الحواجب ورسم خطوط دقيقة تشبه الشعيرات. الدرجة المتوفرة تُؤكَّد قبل الطلب.",
-      "description_en": "A brow defining pen for drawing fine, hair-like strokes. Confirm the available shade before ordering.",
+      "description": "قلم لتحديد الحواجب ورسم خطوط دقيقة تشبه الشعيرات، مقاوم للماء. نؤكد معك الدرجة عبر واتساب.",
+      "description_en": "A waterproof brow pen for drawing fine, hair-like strokes. We confirm your shade with you on WhatsApp.",
       "featured": false,
       "images": [
         {"src": "images/products/roseberry-brow-pen.jpg", "alt": "قلم تحديد الحواجب روز بيري", "alt_en": "Roseberry Brow Defining Pen"}
       ],
       "variants": [
-        {"id": "roseberry-brow-pen-default", "price": 1.000, "available": false}
+        {"id": "roseberry-brow-pen-default", "price": 1.000, "available": true}
       ]
     },
     {
       "id": "angled-detail-brush",
-      "status": "draft",
       "name": "فرشاة تحديد مائلة",
       "name_en": "Angled Detail Brush",
       "category": "tools",
@@ -311,12 +310,11 @@
         {"src": "images/products/angled-detail-brush.jpg", "alt": "فرشاة تحديد مائلة", "alt_en": "Angled Detail Brush"}
       ],
       "variants": [
-        {"id": "angled-detail-brush-default", "price": 1.000, "available": false}
+        {"id": "angled-detail-brush-default", "price": 1.000, "available": true}
       ]
     },
     {
       "id": "nose-contour-brush",
-      "status": "draft",
       "name": "فرشاة تحديد الأنف",
       "name_en": "Nose Contour Brush",
       "category": "tools",
@@ -327,12 +325,11 @@
         {"src": "images/products/nose-contour-brush.jpg", "alt": "فرشاة تحديد الأنف", "alt_en": "Nose Contour Brush"}
       ],
       "variants": [
-        {"id": "nose-contour-brush-default", "price": 1.000, "available": false}
+        {"id": "nose-contour-brush-default", "price": 1.000, "available": true}
       ]
     },
     {
       "id": "foundation-brush",
-      "status": "draft",
       "name": "فرشاة توزيع الفاونديشن",
       "name_en": "Foundation Brush",
       "category": "tools",
@@ -343,12 +340,11 @@
         {"src": "images/products/foundation-brush.jpg", "alt": "فرشاة توزيع الفاونديشن", "alt_en": "Foundation Brush"}
       ],
       "variants": [
-        {"id": "foundation-brush-default", "price": 1.000, "available": false}
+        {"id": "foundation-brush-default", "price": 1.000, "available": true}
       ]
     },
     {
       "id": "eyeshadow-blending-brush",
-      "status": "draft",
       "name": "فرشاة دمج ظلال العيون",
       "name_en": "Eyeshadow Blending Brush",
       "category": "tools",
@@ -359,7 +355,22 @@
         {"src": "images/products/eyeshadow-blending-brush.jpg", "alt": "فرشاة دمج ظلال العيون", "alt_en": "Eyeshadow Blending Brush"}
       ],
       "variants": [
-        {"id": "eyeshadow-blending-brush-default", "price": 1.000, "available": false}
+        {"id": "eyeshadow-blending-brush-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "blush-blending-brush",
+      "name": "فرشاة دمج الروج",
+      "name_en": "Blush Blending Brush",
+      "category": "tools",
+      "description": "فرشاة صغيرة برأس مستدير لدمج الروج والبلاشر بنعومة، مع مقبض وردي.",
+      "description_en": "A small rounded brush for softly blending blush, with a pink handle.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/blush-blending-brush.jpg", "alt": "فرشاة دمج الروج في علبتها الوردية", "alt_en": "Blush blending brush in its pink box"}
+      ],
+      "variants": [
+        {"id": "blush-blending-brush-default", "price": 1.000, "available": true}
       ]
     }
   ]

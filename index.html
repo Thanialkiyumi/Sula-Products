@@ -12,7 +12,7 @@
   </script>
   <title data-i18n="title.home">Sula Products</title>
   <meta name="description" content="" data-i18n-attr="content:desc.home">
-  <meta name="theme-color" content="#FFFAF8">
+  <meta name="theme-color" content="#FFFFFF">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Sula Products">
   <meta property="og:title" content="Sula Products">
@@ -22,84 +22,132 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@600&family=Cormorant+Garamond:wght@600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">انتقلي إلى المحتوى</a>
 
+  <div class="announce" role="note">
+    <div class="announce-track">
+      <p data-i18n="announce.1">اطلبي بسهولة عبر واتساب</p>
+      <p data-i18n="announce.2"></p>
+      <p data-i18n="announce.3"></p>
+    </div>
+  </div>
+
   <header class="site-header">
-    <div class="wrap">
+    <div class="wrap header-main">
+      <a class="header-search" href="products.html#search"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span data-i18n="nav.search">ابحثي عن منتج</span></a>
       <a class="logo" href="index.html">
         <span data-brand-name>Sula Products</span>
         <small data-brand-tagline></small>
       </a>
-      <nav class="main-nav" aria-label="القائمة الرئيسية" data-i18n-attr="aria-label:nav.label">
-        <ul>
-          <li><a href="index.html" data-i18n="nav.home" aria-current="page">الرئيسية</a></li>
-          <li><a href="products.html" data-i18n="nav.products">المنتجات</a></li>
-          <li><a href="cart.html"><span data-i18n="nav.cart">السلة</span> <span class="cart-count"><span data-cart-count>0</span><span class="visually-hidden" data-i18n="nav.items"> قطعة</span></span></a></li>
-          <li><button type="button" class="lang-toggle" data-lang-toggle data-i18n="lang.button" data-i18n-attr="aria-label:lang.aria">English</button></li>
-        </ul>
-      </nav>
+      <div class="header-tools">
+        <button type="button" class="lang-toggle" data-lang-toggle data-i18n="lang.button" data-i18n-attr="aria-label:lang.aria">English</button>
+        <a class="cart-link" href="cart.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="visually-hidden" data-i18n="nav.cart">السلة</span><span class="cart-count"><span data-cart-count>0</span><span class="visually-hidden" data-i18n="nav.items"> قطعة</span></span></a>
+      </div>
     </div>
+    <nav class="cat-nav" aria-label="القائمة الرئيسية" data-i18n-attr="aria-label:nav.label">
+      <ul class="wrap" data-cat-nav>
+        <li><a href="index.html" data-i18n="nav.home" data-nav="home">الرئيسية</a></li>
+        <li><a href="products.html" data-i18n="nav.all" data-nav="all">كل المنتجات</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="main" class="wrap" tabindex="-1">
-    <div id="notices" class="notice-stack" aria-live="polite"></div>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-text rise">
+  <main id="main" tabindex="-1">
+    <div class="wrap"><div id="notices" class="notice-stack" aria-live="polite"></div></div>
+
+    <section class="hero-banner" aria-labelledby="hero-title">
+      <div class="hero-banner-media rise" style="--i: 1">
+        <img id="hero-image" src="images/site/hero.svg" alt="" width="1200" height="900" fetchpriority="high">
+      </div>
+      <div class="hero-banner-text rise">
         <p class="eyebrow" data-brand-tagline></p>
-        <h1 id="hero-title" data-brand-name>Sula Products</h1>
+        <h1 id="hero-title" data-i18n="home.heroTitle">جمالك يبدأ من هنا</h1>
         <p id="hero-intro"></p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="products.html"><span data-i18n="home.cta">تسوّقي المنتجات</span> <span class="arrow" aria-hidden="true"></span></a>
+          <a class="btn btn-ghost" href="#how" data-i18n="home.steps">طريقة الطلب</a>
         </div>
       </div>
-      <div class="hero-media rise" style="--i: 2">
-        <img id="hero-image" src="images/site/hero.svg" alt="" width="1200" height="900" fetchpriority="high">
-        <span class="hero-chip" data-i18n="home.chip"></span>
-      </div>
     </section>
 
-    <section class="section" aria-labelledby="cat-title">
-      <div class="section-head">
+    <section class="section wrap" aria-labelledby="cat-title">
+      <div class="section-head center">
         <h2 id="cat-title" data-i18n="home.categories"></h2>
       </div>
-      <ul id="category-list" class="category-grid"></ul>
+      <ul id="category-list" class="category-tiles"></ul>
     </section>
 
-    <section class="section" aria-labelledby="steps-title">
-      <div class="section-head">
-        <h2 id="steps-title" data-i18n="home.steps"></h2>
-      </div>
-      <ol class="steps">
-        <li><div><strong data-i18n="home.step1.title"></strong><span data-i18n="home.step1.text"></span></div></li>
-        <li><div><strong data-i18n="home.step2.title"></strong><span data-i18n="home.step2.text"></span></div></li>
-        <li><div><strong data-i18n="home.step3.title"></strong><span data-i18n="home.step3.text"></span></div></li>
-      </ol>
-    </section>
-
-    <section class="section" aria-labelledby="featured-title">
-      <div class="section-head">
+    <section class="section wrap" aria-labelledby="featured-title">
+      <div class="section-head center">
         <h2 id="featured-title" data-i18n="home.featured"></h2>
-        <a href="products.html" data-i18n="home.viewAll"></a>
       </div>
-      <ul id="featured-list" class="product-grid">
-        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
-        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
-        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
-        <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
-      </ul>
+      <div class="tabs" id="product-tabs" role="group" data-i18n-attr="aria-label:catalog.filter"></div>
+      <div class="carousel">
+        <button type="button" class="carousel-btn prev" data-scroll="-1" data-i18n-attr="aria-label:home.prev"></button>
+        <ul id="featured-list" class="product-grid product-row">
+          <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+          <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+          <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+          <li class="product-card skeleton" aria-hidden="true"><div class="thumb"></div><div class="bar"></div><div class="bar short"></div></li>
+        </ul>
+        <button type="button" class="carousel-btn next" data-scroll="1" data-i18n-attr="aria-label:home.next"></button>
+      </div>
+      <p class="view-all"><a class="btn btn-secondary" id="view-all" href="products.html" data-i18n="home.viewAll"></a></p>
+    </section>
+
+    <section class="promo-banner" id="how" aria-labelledby="steps-title">
+      <div class="wrap">
+        <p class="promo-kicker" data-i18n="home.chip"></p>
+        <h2 id="steps-title" data-i18n="home.steps"></h2>
+        <ol class="steps">
+          <li><div><strong data-i18n="home.step1.title"></strong><span data-i18n="home.step1.text"></span></div></li>
+          <li><div><strong data-i18n="home.step2.title"></strong><span data-i18n="home.step2.text"></span></div></li>
+          <li><div><strong data-i18n="home.step3.title"></strong><span data-i18n="home.step3.text"></span></div></li>
+        </ol>
+        <a class="btn btn-light" href="products.html" data-i18n="home.cta"></a>
+      </div>
+    </section>
+
+    <section class="section wrap" aria-labelledby="insta-title">
+      <div class="insta-card">
+        <div>
+          <p class="eyebrow" data-i18n="home.instaKicker"></p>
+          <h2 id="insta-title" data-i18n="home.instaTitle"></h2>
+          <p data-i18n="home.instaText"></p>
+        </div>
+        <a class="btn btn-primary" data-instagram-btn href="https://www.instagram.com/sula__products/" target="_blank" rel="noopener">@sula__products</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p><strong data-brand-name>Sula Products</strong> · <span data-brand-tagline></span></p>
-      <p data-i18n="footer.orders"></p>
-      <p><a data-instagram-link href="https://www.instagram.com/sula__products/" target="_blank" rel="noopener">Instagram @sula__products</a></p>
-      <p class="muted">© <span data-year></span> Sula Products</p>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo" data-brand-name>Sula Products</p>
+        <p class="footer-hello" data-i18n="footer.hello">خلّينا نبقى على تواصل</p>
+        <p data-i18n="footer.orders"></p>
+        <p class="footer-social"><a class="btn btn-outline-light" data-instagram-link href="https://www.instagram.com/sula__products/" target="_blank" rel="noopener">Instagram @sula__products</a></p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-head" data-i18n="footer.shop">تسوّقي</p>
+        <ul data-footer-cats>
+          <li><a href="products.html" data-i18n="nav.all">كل المنتجات</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-head" data-i18n="footer.help">المساعدة</p>
+        <ul>
+          <li><a href="index.html#how" data-i18n="home.steps">طريقة الطلب</a></li>
+          <li><a href="cart.html" data-i18n="nav.cart">السلة</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>© <span data-year></span> Sula Products · <span data-brand-tagline></span></p>
     </div>
   </footer>
 

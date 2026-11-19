@@ -432,8 +432,38 @@
               return el("span", { className: "swatch-dot", style: { background: v.swatch }, "aria-hidden": "true" });
             }))
           : null
-      ])
+      ]),
+      // Visual "button" only: the whole card is already one link (the title)
+      el("span", {
+        className: "card-cta",
+        "aria-hidden": "true",
+        text: !available || product.priceTbc ? t("card.view") : product.hasOptions ? t("card.chooseShade") : t("card.shop")
+      })
     ]);
+  }
+
+  // Category links in the header strip and the footer, built from products.json
+  function renderCategoryNav(catalog) {
+    var params = new URLSearchParams(location.search);
+    var page = location.pathname.split("/").pop() || "index.html";
+    var activeCat = page === "products.html" ? (params.get("category") || "") : null;
+    var used = catalog.categories.filter(function (c) {
+      return catalog.products.some(function (p) { return p.category === c.id; });
+    });
+    document.querySelectorAll("[data-cat-nav], [data-footer-cats]").forEach(function (ul) {
+      var isHeader = ul.hasAttribute("data-cat-nav");
+      used.forEach(function (c) {
+        var a = el("a", { href: "products.html?category=" + encodeURIComponent(c.id), text: c.name });
+        if (isHeader && activeCat === c.id) a.setAttribute("aria-current", "page");
+        ul.appendChild(el("li", null, [a]));
+      });
+      if (isHeader) {
+        var home = ul.querySelector('[data-nav="home"]');
+        var all = ul.querySelector('[data-nav="all"]');
+        if (home && (page === "index.html" || page === "")) home.setAttribute("aria-current", "page");
+        if (all && activeCat === "") all.setAttribute("aria-current", "page");
+      }
+    });
   }
 
   function renderNotices(container, messages, catalog) {
@@ -490,6 +520,7 @@
       var catalog = normalizeCatalog(results[1]);
       var checked = validateCart(catalog, settings);
       fillSiteChrome(settings);
+      renderCategoryNav(catalog);
       renderNotices(document.getElementById("notices"), checked.notices, catalog);
       return { settings: settings, catalog: catalog, cart: checked.items, cartNotices: checked.notices };
     }).catch(function (error) {

@@ -238,7 +238,9 @@ Add `{ "id": "nails", "name": "الأظافر" }` to `categories` at the top of 
 
 ### Change colors or fonts
 
-Open `assets/css/styles.css`. All colors are at the top under `:root`, for example `--rose` for buttons.
+Open `assets/css/styles.css`. The current look (black, white and Sula pink) is set in the section called **Bold beauty-store look** near the bottom: change `--pink` for the accent colour and `--black` for buttons, the top bar and the footer. To go back to the older soft look, delete that section and everything below it.
+
+The black bar at the very top shows three short messages. Change their wording in `assets/js/i18n.js` (`announce.1`, `announce.2`, `announce.3`, in Arabic and English). The category links under the logo and in the footer are made automatically from the categories in `products.json`.
 
 ---
 

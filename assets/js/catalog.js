@@ -17,6 +17,7 @@
     var noResults = document.getElementById("no-results");
 
     searchInput.value = params.get("q") || "";
+    if (location.hash === "#search") searchInput.focus();
 
     // Pre-compute searchable text for each product (name, category, shades, ids)
     var index = catalog.products.map(function (p) {

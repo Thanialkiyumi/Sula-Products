@@ -35,7 +35,7 @@ The site is plain HTML, CSS, and JavaScript. There is no build step: the files y
 
 ```
 sula-products/
-├── index.html            Homepage (intro, categories, featured products)
+├── index.html            Homepage (intro, featured products, categories, how to order)
 ├── products.html         Catalog with search and category filters
 ├── product.html          One product (opened as product.html?id=PRODUCT_ID)
 ├── cart.html             Cart, checkout form and WhatsApp button
@@ -179,13 +179,15 @@ Always keep a copy of the file before a big edit. JSON is strict: every item is 
 | `name` | Arabic name shown on the site. |
 | `category` | Must match an `id` in the `categories` list at the top of the file. |
 | `description` | Arabic description. Only write true facts. |
-| `featured` | `true` shows it on the homepage (4 or 8 featured products look neatest). |
+| `featured` | `true` shows it on the homepage (4 or 8 featured products look neatest). Products with a real photo are shown first. |
 | `optionLabel` | What the options are called: `"اللون"`, `"الدرجة"`, `"الحجم"`. Optional, default is اللون. |
 | `images` | One or more photos. The first one is the main photo. `alt` describes the photo in Arabic for blind visitors and Google. |
 | `variants` | Every shade/size the customer can choose. |
 | variant `id` | Permanent unique code for this shade. Never reuse or change it. |
 | `shade` | Shade name shown to the customer. Leave it out for a product with no shades. |
-| `swatch` | Optional color circle, a hex color like `"#C98A8F"`. |
+| `swatch` | Optional color circle, a hex color like `"#C98A8F"`. Only use a color taken from a real photo of the product. |
+| `status` | Optional. `"draft"` hides the product from shoppers until you remove this line. Drafts can be checked by opening any page with `?preview=1` at the end of the address (they show a "Preview only" label and can never be ordered). `?preview=0` turns preview off. When you publish a draft, also set `"available": true` on the shades that are in stock. |
+| `swatchImage` | Optional small photo of the real shade, like `"images/products/swatches/kiko-lip-gloss-13.jpg"`. A small square crop (about 96 × 96 pixels) of the shade from your own product photo. It shows in the circle instead of the color. |
 | `price` | Price in OMR, for example `3.500`. |
 | `available` | `true` or `false`. |
 

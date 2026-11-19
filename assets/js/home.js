@@ -47,6 +47,9 @@
     // Tabs: Featured, then one per category (like a "new / best sellers" switcher)
     var featured = catalog.products.filter(function (p) { return p.featured; });
     if (!featured.length) featured = catalog.products.slice(0, 8);
+    // Products with a real photo come first; ones still showing a drawing go after them
+    function hasPhoto(p) { return !/\.svg$/i.test(p.images[0].src); }
+    featured = featured.filter(hasPhoto).concat(featured.filter(function (p) { return !hasPhoto(p); }));
     var tabs = [{ id: "", name: S.t("home.tabFeatured"), products: featured }].concat(usedCats.map(function (cat) {
       return { id: cat.id, name: cat.name, products: catalog.products.filter(function (p) { return p.category === cat.id; }) };
     }));

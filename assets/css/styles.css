@@ -1565,3 +1565,29 @@ html[lang="en"] .footer-head { text-transform: uppercase; letter-spacing: 0.1em;
 .footer-grid { grid-template-columns: 1fr 1fr; }
 .footer-brand { grid-column: 1 / -1; }
 @media (min-width: 760px) { .footer-brand { grid-column: auto; } }
+/* ---------- Real product photos (2026-11) ---------- */
+/* Every card photo is cropped to the same centred square on the studio-cream
+   background the owner's photos use, so the grid lines up neatly. */
+.product-card .thumb { background: #FDF5EE; }
+.product-card img { object-position: center; }
+
+/* Shade samples: a real crop of the owner's photo when there is one */
+.swatch-dot.has-photo {
+  background-size: cover;
+  background-position: center;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+.product-card .swatch-dot { width: 16px; height: 16px; }
+.shade-option .swatch-dot { width: 28px; height: 28px; flex: none; }
+.shade-option label:has(.swatch-dot) { padding-inline-start: 6px; }
+
+/* "How to order" sits lower on the page now; keep its heading clear of the sticky header */
+#how-to-order { scroll-margin-top: 96px; }
+
+/* Show each photo whole inside the same square frame (portrait seller
+   photos are never cut off; square studio photos fill the frame as before) */
+.product-card img,
+.gallery-main img,
+.gallery-thumbs img { object-fit: contain; }
+.gallery-main { background: #FDF5EE; }
+.badge-draft { background: rgba(255, 255, 255, 0.95); color: var(--rose); border: 1px solid var(--blush-deep); }

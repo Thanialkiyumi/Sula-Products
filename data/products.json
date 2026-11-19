@@ -4,7 +4,8 @@
     { "id": "face", "name": "الوجه", "name_en": "Face" },
     { "id": "eyes", "name": "العيون", "name_en": "Eyes" },
     { "id": "gifts", "name": "الهدايا", "name_en": "Gifts" },
-    { "id": "tools", "name": "الفرش والأدوات", "name_en": "Brushes & tools" }
+    { "id": "tools", "name": "الفرش والأدوات", "name_en": "Brushes & tools" },
+    { "id": "nails", "name": "العناية بالأظافر", "name_en": "Nail care" }
   ],
   "products": [
     {
@@ -185,21 +186,22 @@
       "description_en": "KIKO Milano lip gloss in 12 shades.",
       "featured": true,
       "images": [
-        {"src": "images/products/kiko-lip-gloss.jpg", "alt": "اثنا عشر ملمع شفاه KIKO بدرجات مرقّمة", "alt_en": "Twelve numbered KIKO lip gloss shades"}
+        {"src": "images/products/kiko-lip-gloss.jpg", "alt": "اثنا عشر ملمع شفاه KIKO بدرجات مرقّمة", "alt_en": "Twelve numbered KIKO lip gloss shades"},
+        {"src": "images/products/kiko-lip-gloss-2.jpg", "alt": "ملمعات شفاه KIKO بدرجات وردية وحمراء", "alt_en": "KIKO lip glosses in pink and red shades"}
       ],
       "variants": [
-        {"id": "kiko-lip-gloss-13", "shade": "13", "shade_en": "13", "swatch": "#C22334", "swatchImage": "images/products/swatches/kiko-lip-gloss-13.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-18", "shade": "18", "shade_en": "18", "swatch": "#CA4E1F", "swatchImage": "images/products/swatches/kiko-lip-gloss-18.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-07", "shade": "07", "shade_en": "07", "swatch": "#DF543E", "swatchImage": "images/products/swatches/kiko-lip-gloss-07.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-20", "shade": "20", "shade_en": "20", "swatch": "#8B2508", "swatchImage": "images/products/swatches/kiko-lip-gloss-20.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-31", "shade": "31", "shade_en": "31", "swatch": "#BD7F6C", "swatchImage": "images/products/swatches/kiko-lip-gloss-31.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-10", "shade": "10", "shade_en": "10", "swatch": "#A7031B", "swatchImage": "images/products/swatches/kiko-lip-gloss-10.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-32", "shade": "32", "shade_en": "32", "swatch": "#B24021", "swatchImage": "images/products/swatches/kiko-lip-gloss-32.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-19", "shade": "19", "shade_en": "19", "swatch": "#DC521D", "swatchImage": "images/products/swatches/kiko-lip-gloss-19.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-05", "shade": "05", "shade_en": "05", "swatch": "#F6858A", "swatchImage": "images/products/swatches/kiko-lip-gloss-05.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-22", "shade": "22", "shade_en": "22", "swatch": "#CF0D03", "swatchImage": "images/products/swatches/kiko-lip-gloss-22.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-21", "shade": "21", "shade_en": "21", "swatch": "#8C3021", "swatchImage": "images/products/swatches/kiko-lip-gloss-21.jpg", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-04", "shade": "04", "shade_en": "04", "swatch": "#E77156", "swatchImage": "images/products/swatches/kiko-lip-gloss-04.jpg", "price": null, "available": true}
+        {"id": "kiko-lip-gloss-13", "shade": "13", "shade_en": "13", "swatch": "#C22334", "swatchImage": "images/products/swatches/kiko-lip-gloss-13.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-18", "shade": "18", "shade_en": "18", "swatch": "#CA4E1F", "swatchImage": "images/products/swatches/kiko-lip-gloss-18.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-07", "shade": "07", "shade_en": "07", "swatch": "#DF543E", "swatchImage": "images/products/swatches/kiko-lip-gloss-07.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-20", "shade": "20", "shade_en": "20", "swatch": "#8B2508", "swatchImage": "images/products/swatches/kiko-lip-gloss-20.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-31", "shade": "31", "shade_en": "31", "swatch": "#BD7F6C", "swatchImage": "images/products/swatches/kiko-lip-gloss-31.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-10", "shade": "10", "shade_en": "10", "swatch": "#A7031B", "swatchImage": "images/products/swatches/kiko-lip-gloss-10.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-32", "shade": "32", "shade_en": "32", "swatch": "#B24021", "swatchImage": "images/products/swatches/kiko-lip-gloss-32.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-19", "shade": "19", "shade_en": "19", "swatch": "#DC521D", "swatchImage": "images/products/swatches/kiko-lip-gloss-19.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-05", "shade": "05", "shade_en": "05", "swatch": "#F6858A", "swatchImage": "images/products/swatches/kiko-lip-gloss-05.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-22", "shade": "22", "shade_en": "22", "swatch": "#CF0D03", "swatchImage": "images/products/swatches/kiko-lip-gloss-22.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-21", "shade": "21", "shade_en": "21", "swatch": "#8C3021", "swatchImage": "images/products/swatches/kiko-lip-gloss-21.jpg", "price": 1.000, "available": true},
+        {"id": "kiko-lip-gloss-04", "shade": "04", "shade_en": "04", "swatch": "#E77156", "swatchImage": "images/products/swatches/kiko-lip-gloss-04.jpg", "price": 1.000, "available": true}
       ]
     },
     {
@@ -371,6 +373,120 @@
       ],
       "variants": [
         {"id": "blush-blending-brush-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "elf-camo-liquid-blush",
+      "name": "بلاشر سائل e.l.f. Camo",
+      "name_en": "e.l.f. Camo Liquid Blush",
+      "category": "face",
+      "description": "بلاشر سائل عالي التصبغ من e.l.f. بعدة درجات وردية. نؤكد معك الدرجة المتوفرة عبر واتساب.",
+      "description_en": "High-pigment liquid blush by e.l.f. in several pink shades. We confirm the available shade with you on WhatsApp.",
+      "featured": true,
+      "images": [
+        {"src": "images/products/elf-camo-liquid-blush.jpg", "alt": "بلاشرات e.l.f. Camo السائلة بدرجات وردية", "alt_en": "e.l.f. Camo liquid blushes in pink shades"}
+      ],
+      "variants": [
+        {"id": "elf-camo-liquid-blush-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "rhode-peptide-lip-tint",
+      "name": "قلوس rhode Peptide Lip Tint",
+      "name_en": "rhode Peptide Lip Tint",
+      "category": "lips",
+      "description": "بلسم شفاه ملون بالببتيدات من rhode، متوفر بأربع درجات. نؤكد معك الدرجة عبر واتساب.",
+      "description_en": "Tinted peptide lip balm by rhode, available in four shades. We confirm your shade with you on WhatsApp.",
+      "featured": true,
+      "images": [
+        {"src": "images/products/rhode-peptide-lip-tint.jpg", "alt": "علب rhode Peptide Lip Tint بأربع درجات", "alt_en": "rhode Peptide Lip Tint boxes in four shades"}
+      ],
+      "variants": [
+        {"id": "rhode-peptide-lip-tint-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "rhode-pocket-blush",
+      "name": "بلاشر rhode",
+      "name_en": "rhode Blush",
+      "category": "face",
+      "optionLabel": "اللون",
+      "optionLabel_en": "Shade",
+      "description": "بلاشر كريمي من rhode بأربع درجات.",
+      "description_en": "Creamy blush by rhode in four shades.",
+      "featured": true,
+      "images": [
+        {"src": "images/products/rhode-pocket-blush.jpg", "alt": "علب بلاشر rhode بدرجات freckle وtoasted teddy وspicy marg وpiggy", "alt_en": "rhode blush boxes in freckle, toasted teddy, spicy marg and piggy"}
+      ],
+      "variants": [
+        {"id": "rhode-pocket-blush-freckle", "shade": "freckle", "shade_en": "freckle", "swatch": "#B95E7E", "swatchImage": "images/products/swatches/rhode-pocket-blush-freckle.jpg", "price": 1.000, "available": true},
+        {"id": "rhode-pocket-blush-toasted-teddy", "shade": "toasted teddy", "shade_en": "toasted teddy", "swatch": "#72293F", "swatchImage": "images/products/swatches/rhode-pocket-blush-toasted-teddy.jpg", "price": 1.000, "available": true},
+        {"id": "rhode-pocket-blush-spicy-marg", "shade": "spicy marg", "shade_en": "spicy marg", "swatch": "#E14363", "swatchImage": "images/products/swatches/rhode-pocket-blush-spicy-marg.jpg", "price": 1.000, "available": true},
+        {"id": "rhode-pocket-blush-piggy", "shade": "piggy", "shade_en": "piggy", "swatch": "#9D5271", "swatchImage": "images/products/swatches/rhode-pocket-blush-piggy.jpg", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "note-real-look-mascara",
+      "name": "ماسكارا NOTE Real Look",
+      "name_en": "NOTE Real Look Mascara",
+      "category": "eyes",
+      "description": "ماسكارا Real Look من NOTE لرموش أطول وأكثف.",
+      "description_en": "Real Look mascara by NOTE for longer, fuller-looking lashes.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/note-real-look-mascara.jpg", "alt": "ماسكارا NOTE Real Look مع علبتها", "alt_en": "NOTE Real Look mascara with its box"}
+      ],
+      "variants": [
+        {"id": "note-real-look-mascara-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "mini-matte-lipstick-set",
+      "name": "علبة ٦ أحمر شفاه ميني مطفي",
+      "name_en": "Mini Matte Lipstick Set (6 pieces)",
+      "category": "lips",
+      "description": "علبة صغيرة فيها ٦ أحمر شفاه مطفي بحجم ميني، مناسبة للشنطة والهدايا.",
+      "description_en": "A small case of 6 mini matte lipsticks, handy for your bag or as a gift.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/mini-matte-lipstick-set.jpg", "alt": "علبة برتقالية فيها ستة أحمر شفاه ميني مطفي", "alt_en": "Orange case holding six mini matte lipsticks"}
+      ],
+      "variants": [
+        {"id": "mini-matte-lipstick-set-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "brow-lash-brush",
+      "name": "فرشاة الحواجب والرموش ٢ في ١",
+      "name_en": "2-in-1 Eyebrow & Eyelash Brush",
+      "category": "tools",
+      "description": "فرشاة بطرفين: طرف مائل لتحديد الحواجب وطرف مسكرة لتمشيط الحواجب والرموش.",
+      "description_en": "Dual-ended brush: an angled tip for defining brows and a spoolie for brushing brows and lashes.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/brow-lash-brush.jpg", "alt": "فرشاة الحواجب والرموش في غلافها", "alt_en": "Eyebrow and eyelash brush in its pack"}
+      ],
+      "variants": [
+        {"id": "brow-lash-brush-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "flormar-nail-care",
+      "name": "معالجات أظافر Flormar",
+      "name_en": "Flormar Nail Care",
+      "category": "nails",
+      "optionLabel": "النوع",
+      "optionLabel_en": "Type",
+      "description": "معالجات أظافر من Flormar: ضد التكسر، لتطويل الأظافر، أو عناية كاملة ٤ في ١.",
+      "description_en": "Flormar nail treatments: anti-breakage, growth, or 4-in-1 complete care.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/flormar-nail-care.jpg", "alt": "معالجات أظافر Flormar الثلاثة في علبها", "alt_en": "Three Flormar nail treatments in their boxes"}
+      ],
+      "variants": [
+        {"id": "flormar-nail-care-no-more-breaks", "shade": "No More Breaks (ضد التكسر)", "shade_en": "No More Breaks (anti-breakage)", "price": 1.000, "available": true},
+        {"id": "flormar-nail-care-max-growth", "shade": "Max Growth (لتطويل الأظافر)", "shade_en": "Max Growth (nail growth)", "price": 1.000, "available": true},
+        {"id": "flormar-nail-care-complete-care", "shade": "4 in 1 Complete Care (عناية كاملة)", "shade_en": "4 in 1 Complete Care", "price": 1.000, "available": true}
       ]
     }
   ]

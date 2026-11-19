@@ -547,10 +547,62 @@
     ]));
   }
 
+  /* ---------- Phone app (add to home screen) ----------
+     The site can be installed like an app. Android shows an "Install"
+     button; on iPhone we explain the Share > Add to Home Screen steps.
+     The tip is hidden once installed or after the visitor closes it. */
+  var INSTALL_KEY = "sula-install-tip-closed";
+  var installEvent = null;
+
+  function isInstalled() {
+    return (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone === true;
+  }
+
+  function isIphoneSafari() {
+    var ua = navigator.userAgent;
+    var ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    return ios && /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|Instagram|FBAN|FBAV/.test(ua);
+  }
+
+  function showInstallTip(mode) {
+    if (isInstalled() || storageGet(INSTALL_KEY) === "1" || document.querySelector(".install-tip")) return;
+    var close = function () { storageSet(INSTALL_KEY, "1"); tip.classList.remove("is-visible"); setTimeout(function () { tip.remove(); }, 400); };
+    var tip = el("div", { className: "install-tip", role: "dialog", "aria-label": t("install.title") }, [
+      el("img", { src: "images/app/icon-192.png", alt: "", width: 44, height: 44 }),
+      el("div", { className: "install-text" }, [
+        el("strong", { text: t("install.title") }),
+        el("span", { text: mode === "ios" ? t("install.ios") : t("install.android") })
+      ]),
+      mode === "android"
+        ? el("button", { type: "button", className: "btn btn-primary install-btn", text: t("install.button"), onclick: function () {
+            if (!installEvent) return;
+            installEvent.prompt();
+            installEvent.userChoice.then(function () { installEvent = null; close(); });
+          } })
+        : null,
+      el("button", { type: "button", className: "install-close", "aria-label": t("install.close"), text: "×", onclick: close })
+    ]);
+    document.body.appendChild(tip);
+    setTimeout(function () { tip.classList.add("is-visible"); }, 50);
+  }
+
+  function setupApp() {
+    if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+      navigator.serviceWorker.register("sw.js").catch(function () {});
+    }
+    window.addEventListener("beforeinstallprompt", function (e) {
+      e.preventDefault();
+      installEvent = e;
+      setTimeout(function () { showInstallTip("android"); }, 2500);
+    });
+    if (isIphoneSafari()) setTimeout(function () { showInstallTip("ios"); }, 2500);
+  }
+
   // Every page calls Sula.boot() first.
   function boot() {
     updateCartCount();
     watchHeader();
+    setupApp();
     return Promise.all([fetchJSON("data/settings.json"), fetchJSON("data/products.json")]).then(function (results) {
       var settings = normalizeSettings(results[0]);
       currencyLabel = settings.currencyLabel;

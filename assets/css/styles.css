@@ -1602,3 +1602,41 @@ html[lang="en"] .footer-head { text-transform: uppercase; letter-spacing: 0.1em;
 }
 /* Footer: brand + two link columns side by side on wide screens */
 @media (min-width: 760px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+
+/* "Get the app" tip (add to home screen), shown once at the bottom */
+.install-tip {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 480px;
+  margin-inline: auto;
+  padding: 12px 12px 12px 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 16px 40px rgba(17, 17, 17, 0.18);
+  transform: translateY(140%);
+  opacity: 0;
+  transition: transform 380ms var(--ease), opacity 380ms var(--ease);
+}
+.install-tip.is-visible { transform: none; opacity: 1; }
+.install-tip img { width: 44px; height: 44px; border-radius: 10px; flex: none; }
+.install-text { display: grid; gap: 2px; font-size: 0.85rem; line-height: 1.45; flex: 1; min-width: 0; }
+.install-text span { color: var(--ink-soft); }
+.install-btn { min-height: 40px; padding: 0 16px; flex: none; }
+.install-close {
+  flex: none;
+  width: 36px; height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--grey-bg);
+  color: var(--ink);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}

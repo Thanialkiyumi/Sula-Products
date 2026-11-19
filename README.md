@@ -246,6 +246,16 @@ The black bar at the very top shows three short messages. Change their wording i
 
 ---
 
+### Phone app (Add to Home Screen)
+
+Customers can install the shop on their phone like an app, for free:
+- **iPhone:** open the site in Safari, tap Share, then "Add to Home Screen".
+- **Android:** Chrome shows an "Install" button (also in the ⋮ menu: "Install app").
+
+A small tip at the bottom of the page explains this once; it disappears after the customer closes it or installs the app. The app icon is `images/app/icon-512.png` (also `icon-192.png` and `apple-touch-icon.png`), and the app name is in `manifest.webmanifest`. `sw.js` makes the app open fast and keeps working on a weak connection; products and prices are always loaded fresh when there is internet.
+
+---
+
 ### English and Arabic
 
 The site has a language button in the header (English / العربية). Arabic is the default. The visitor's choice is remembered on their phone, and a link ending in `?lang=en` opens the English version directly (handy for sharing).

@@ -3,7 +3,8 @@
     { "id": "lips", "name": "الشفاه", "name_en": "Lips" },
     { "id": "face", "name": "الوجه", "name_en": "Face" },
     { "id": "eyes", "name": "العيون", "name_en": "Eyes" },
-    { "id": "gifts", "name": "الهدايا", "name_en": "Gifts" }
+    { "id": "gifts", "name": "الهدايا", "name_en": "Gifts" },
+    { "id": "tools", "name": "الفرش والأدوات", "name_en": "Brushes & tools" }
   ],
   "products": [
     {
@@ -20,8 +21,8 @@
         {"src": "images/products/blush.svg", "alt": "صورة توضيحية لبلاشر سائل سولا بيوتي", "alt_en": "Placeholder image for Sula Beauty Liquid Blush"}
       ],
       "variants": [
-        {"id": "sula-liquid-blush-girly", "shade": "Girly (وردي)", "shade_en": "Girly (rose)", "swatch": "#D9848F", "price": 3.500, "available": true},
-        {"id": "sula-liquid-blush-mango", "shade": "Mango (نود)", "shade_en": "Mango (nude)", "swatch": "#D9A07F", "price": 3.500, "available": true}
+        {"id": "sula-liquid-blush-girly", "shade": "Girly (وردي)", "shade_en": "Girly (rose)", "price": 3.500, "available": true},
+        {"id": "sula-liquid-blush-mango", "shade": "Mango (نود)", "shade_en": "Mango (nude)", "price": 3.500, "available": true}
       ]
     },
     {
@@ -38,9 +39,9 @@
         {"src": "images/products/gloss.svg", "alt": "صورة توضيحية لملمع الشفاه", "alt_en": "Placeholder image for Sula Lip Gloss"}
       ],
       "variants": [
-        {"id": "sula-lip-gloss-rose", "shade": "وردي", "shade_en": "Rose", "swatch": "#D9848F", "price": 2.000, "available": true},
-        {"id": "sula-lip-gloss-berry", "shade": "توتي", "shade_en": "Berry", "swatch": "#8E2F45", "price": 2.000, "available": true},
-        {"id": "sula-lip-gloss-nude", "shade": "نود", "shade_en": "Nude", "swatch": "#C4917A", "price": 2.000, "available": false}
+        {"id": "sula-lip-gloss-rose", "shade": "وردي", "shade_en": "Rose", "price": 2.000, "available": true},
+        {"id": "sula-lip-gloss-berry", "shade": "توتي", "shade_en": "Berry", "price": 2.000, "available": true},
+        {"id": "sula-lip-gloss-nude", "shade": "نود", "shade_en": "Nude", "price": 2.000, "available": false}
       ]
     },
     {
@@ -80,12 +81,12 @@
       "category": "eyes",
       "description": "ماسكارا من SHEGLAM.",
       "description_en": "Mascara by SHEGLAM.",
-      "featured": false,
+      "featured": true,
       "images": [
         {"src": "images/products/sheglam-mascara.jpg", "alt": "علب ماسكارا SHEGLAM باللون النعناعي", "alt_en": "Mint SHEGLAM mascara boxes"}
       ],
       "variants": [
-        {"id": "sheglam-mascara-default", "price": 1.800, "available": true}
+        {"id": "sheglam-mascara-default", "price": 1.000, "available": true}
       ]
     },
     {
@@ -95,7 +96,7 @@
       "category": "gifts",
       "description": "طقم يضم ماسكارا وأحمر شفاه وأحمر خدود.",
       "description_en": "A kit with mascara, lipstick and blush.",
-      "featured": false,
+      "featured": true,
       "images": [
         {"src": "images/products/rose-berry-essentials-kit.jpg", "alt": "علبة طقم Rose Berry مع ماسكارا وأحمر شفاه وأحمر خدود", "alt_en": "Rose Berry kit box with mascara, lipstick and blush"}
       ],
@@ -110,7 +111,7 @@
       "category": "eyes",
       "description": "باليت مكياج متعددة الألوان من Imagic Pro Colors.",
       "description_en": "A multi-color makeup palette by Imagic Pro Colors.",
-      "featured": false,
+      "featured": true,
       "images": [
         {"src": "images/products/imagic-pro-colors-palette.jpg", "alt": "باليت Imagic Pro Colors مفتوحة بألوان متعددة ومرآة", "alt_en": "Open Imagic Pro Colors palette with many shades and a mirror"}
       ],
@@ -147,9 +148,9 @@
         {"src": "images/products/blush-compact-trio.jpg", "alt": "ثلاث علب أحمر خدود مفتوحة بالدرجات 077 و001 و012", "alt_en": "Three open blush compacts in shades 077, 001 and 012"}
       ],
       "variants": [
-        {"id": "blush-compact-077", "shade": "077", "shade_en": "077", "swatch": "#F68861", "price": null, "available": true},
-        {"id": "blush-compact-001", "shade": "001", "shade_en": "001", "swatch": "#FDB9D9", "price": null, "available": true},
-        {"id": "blush-compact-012", "shade": "012", "shade_en": "012", "swatch": "#D95C6A", "price": null, "available": true}
+        {"id": "blush-compact-077", "shade": "077", "shade_en": "077", "swatch": "#F68861", "swatchImage": "images/products/swatches/blush-compact-077.jpg", "price": null, "available": true},
+        {"id": "blush-compact-001", "shade": "001", "shade_en": "001", "swatch": "#FDB9D9", "swatchImage": "images/products/swatches/blush-compact-001.jpg", "price": null, "available": true},
+        {"id": "blush-compact-012", "shade": "012", "shade_en": "012", "swatch": "#D95C6A", "swatchImage": "images/products/swatches/blush-compact-012.jpg", "price": null, "available": true}
       ]
     },
     {
@@ -166,11 +167,11 @@
         {"src": "images/products/huda-beauty-foundation.jpg", "alt": "خمس عبوات كريم أساس Huda Beauty Stay Blur وEasy Blur", "alt_en": "Five Huda Beauty Stay Blur and Easy Blur foundation bottles"}
       ],
       "variants": [
-        {"id": "huda-beauty-foundation-120", "shade": "Stay Blur 120#", "shade_en": "Stay Blur 120#", "swatch": "#D5A48B", "price": null, "available": true},
-        {"id": "huda-beauty-foundation-150g", "shade": "Easy Blur Crème Brûlée 150G", "shade_en": "Easy Blur Crème Brûlée 150G", "swatch": "#DDB491", "price": null, "available": true},
-        {"id": "huda-beauty-foundation-220n", "shade": "Easy Blur Custard 220N", "shade_en": "Easy Blur Custard 220N", "swatch": "#E3BA8E", "price": null, "available": true},
-        {"id": "huda-beauty-foundation-100", "shade": "Stay Blur 100#", "shade_en": "Stay Blur 100#", "swatch": "#DCA88F", "price": null, "available": true},
-        {"id": "huda-beauty-foundation-210b", "shade": "Easy Blur Chai 210B", "shade_en": "Easy Blur Chai 210B", "swatch": "#E2B78D", "price": null, "available": true}
+        {"id": "huda-beauty-foundation-120", "shade": "Stay Blur 120#", "shade_en": "Stay Blur 120#", "swatch": "#D5A48B", "swatchImage": "images/products/swatches/huda-beauty-foundation-120.jpg", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-150g", "shade": "Easy Blur Crème Brûlée 150G", "shade_en": "Easy Blur Crème Brûlée 150G", "swatch": "#DDB491", "swatchImage": "images/products/swatches/huda-beauty-foundation-150g.jpg", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-220n", "shade": "Easy Blur Custard 220N", "shade_en": "Easy Blur Custard 220N", "swatch": "#E3BA8E", "swatchImage": "images/products/swatches/huda-beauty-foundation-220n.jpg", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-100", "shade": "Stay Blur 100#", "shade_en": "Stay Blur 100#", "swatch": "#DCA88F", "swatchImage": "images/products/swatches/huda-beauty-foundation-100.jpg", "price": null, "available": true},
+        {"id": "huda-beauty-foundation-210b", "shade": "Easy Blur Chai 210B", "shade_en": "Easy Blur Chai 210B", "swatch": "#E2B78D", "swatchImage": "images/products/swatches/huda-beauty-foundation-210b.jpg", "price": null, "available": true}
       ]
     },
     {
@@ -182,23 +183,194 @@
       "optionLabel_en": "Shade",
       "description": "ملمع شفاه من KIKO Milano متوفر بـ 12 درجة.",
       "description_en": "KIKO Milano lip gloss in 12 shades.",
-      "featured": false,
+      "featured": true,
       "images": [
         {"src": "images/products/kiko-lip-gloss.jpg", "alt": "اثنا عشر ملمع شفاه KIKO بدرجات مرقّمة", "alt_en": "Twelve numbered KIKO lip gloss shades"}
       ],
       "variants": [
-        {"id": "kiko-lip-gloss-13", "shade": "13", "shade_en": "13", "swatch": "#C22334", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-18", "shade": "18", "shade_en": "18", "swatch": "#CA4E1F", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-07", "shade": "07", "shade_en": "07", "swatch": "#DF543E", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-20", "shade": "20", "shade_en": "20", "swatch": "#8B2508", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-31", "shade": "31", "shade_en": "31", "swatch": "#BD7F6C", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-10", "shade": "10", "shade_en": "10", "swatch": "#A7031B", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-32", "shade": "32", "shade_en": "32", "swatch": "#B24021", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-19", "shade": "19", "shade_en": "19", "swatch": "#DC521D", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-05", "shade": "05", "shade_en": "05", "swatch": "#F6858A", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-22", "shade": "22", "shade_en": "22", "swatch": "#CF0D03", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-21", "shade": "21", "shade_en": "21", "swatch": "#8C3021", "price": null, "available": true},
-        {"id": "kiko-lip-gloss-04", "shade": "04", "shade_en": "04", "swatch": "#E77156", "price": null, "available": true}
+        {"id": "kiko-lip-gloss-13", "shade": "13", "shade_en": "13", "swatch": "#C22334", "swatchImage": "images/products/swatches/kiko-lip-gloss-13.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-18", "shade": "18", "shade_en": "18", "swatch": "#CA4E1F", "swatchImage": "images/products/swatches/kiko-lip-gloss-18.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-07", "shade": "07", "shade_en": "07", "swatch": "#DF543E", "swatchImage": "images/products/swatches/kiko-lip-gloss-07.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-20", "shade": "20", "shade_en": "20", "swatch": "#8B2508", "swatchImage": "images/products/swatches/kiko-lip-gloss-20.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-31", "shade": "31", "shade_en": "31", "swatch": "#BD7F6C", "swatchImage": "images/products/swatches/kiko-lip-gloss-31.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-10", "shade": "10", "shade_en": "10", "swatch": "#A7031B", "swatchImage": "images/products/swatches/kiko-lip-gloss-10.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-32", "shade": "32", "shade_en": "32", "swatch": "#B24021", "swatchImage": "images/products/swatches/kiko-lip-gloss-32.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-19", "shade": "19", "shade_en": "19", "swatch": "#DC521D", "swatchImage": "images/products/swatches/kiko-lip-gloss-19.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-05", "shade": "05", "shade_en": "05", "swatch": "#F6858A", "swatchImage": "images/products/swatches/kiko-lip-gloss-05.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-22", "shade": "22", "shade_en": "22", "swatch": "#CF0D03", "swatchImage": "images/products/swatches/kiko-lip-gloss-22.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-21", "shade": "21", "shade_en": "21", "swatch": "#8C3021", "swatchImage": "images/products/swatches/kiko-lip-gloss-21.jpg", "price": null, "available": true},
+        {"id": "kiko-lip-gloss-04", "shade": "04", "shade_en": "04", "swatch": "#E77156", "swatchImage": "images/products/swatches/kiko-lip-gloss-04.jpg", "price": null, "available": true}
+      ]
+    },
+    {
+      "id": "huda-liquid-matte-mousse",
+      "status": "draft",
+      "name": "أحمر شفاه سائل مطفي موس",
+      "name_en": "Liquid Matte Mousse Lip Colour",
+      "category": "lips",
+      "description": "أحمر شفاه سائل بلمسة مطفية، مع مجموعة درجات ظاهرة في الصورة. اختاري درجتك بعد تأكيد الخيارات المتوفرة.",
+      "description_en": "Matte liquid lip colour, pictured in a range of shades. Select your shade once the available options are confirmed.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/huda-liquid-matte-mousse.jpg", "alt": "أحمر شفاه سائل مطفي موس", "alt_en": "Liquid Matte Mousse Lip Colour"}
+      ],
+      "variants": [
+        {"id": "huda-liquid-matte-mousse-default", "price": 2.500, "available": false}
+      ]
+    },
+    {
+      "id": "rare-luminous-blush",
+      "status": "draft",
+      "name": "بلاشر بودرة بلمسة مضيئة",
+      "name_en": "Luminous Powder Blush",
+      "category": "face",
+      "description": "بلاشر بودرة بلمسة مضيئة لإضافة لون للخدود. تظهر في الصورة درجات متعددة، وتُؤكَّد الخيارات المتوفرة قبل الطلب.",
+      "description_en": "Luminous powder blush for adding colour to the cheeks. Multiple shades are pictured; available options must be confirmed before ordering.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/rare-luminous-blush.jpg", "alt": "بلاشر بودرة بلمسة مضيئة", "alt_en": "Luminous Powder Blush"}
+      ],
+      "variants": [
+        {"id": "rare-luminous-blush-default", "price": 2.500, "available": false}
+      ]
+    },
+    {
+      "id": "daroge-eyeliner",
+      "name": "قلم كحل داروج",
+      "name_en": "Daroge Eyeliner Pencil",
+      "category": "eyes",
+      "description": "قلم كحل من داروج لتحديد العين، مقاوم للماء ولا يتلطخ. متوفر بثلاثة ألوان.",
+      "description_en": "Daroge eyeliner kohl pencil for defining the eyes, waterproof and smudge-proof. Available in three colours.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/daroge-eyeliner.jpg", "alt": "قلم كحل داروج", "alt_en": "Daroge Eyeliner Pencil"}
+      ],
+      "variants": [
+        {"id": "daroge-eyeliner-black", "shade": "أسود", "shade_en": "Black", "swatch": "#1A1A1A", "price": 3.000, "available": true},
+        {"id": "daroge-eyeliner-nude", "shade": "بيج", "shade_en": "Nude", "swatch": "#E2B07E", "price": 3.000, "available": true},
+        {"id": "daroge-eyeliner-white", "shade": "أبيض", "shade_en": "White", "swatch": "#F7F7F5", "price": 3.000, "available": true}
+      ],
+      "optionLabel": "اللون",
+      "optionLabel_en": "Colour"
+    },
+    {
+      "id": "superlasting-lip-duo",
+      "name": "أحمر شفاه ومحدد شفاه ٢ في ١",
+      "name_en": "Superlasting Lipstick & Liner Duo",
+      "category": "lips",
+      "description": "أحمر شفاه ومحدد شفاه في قلم واحد بطرفين، لتحديد الشفاه وإضافة اللون. متوفر بعدة درجات، ونؤكد معك الدرجة عبر واتساب.",
+      "description_en": "A dual-ended lipstick and lip liner in one pencil, for outlining lips and adding colour. Comes in several shades; we confirm your shade with you on WhatsApp.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/superlasting-lip-duo.jpg", "alt": "أحمر شفاه ومحدد شفاه ٢ في ١", "alt_en": "Superlasting Lipstick & Liner Duo"}
+      ],
+      "variants": [
+        {"id": "superlasting-lip-duo-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "benetint-lip-cheek",
+      "name": "تينت للشفاه والخدود",
+      "name_en": "Benetint Lip & Cheek Stain",
+      "category": "face",
+      "description": "تينت للشفاه والخدود لإضافة لمسة لون وردية طبيعية.",
+      "description_en": "A lip and cheek stain for a natural rosy touch of colour.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/benetint-lip-cheek.jpg", "alt": "تينت للشفاه والخدود", "alt_en": "Benetint Lip & Cheek Stain"}
+      ],
+      "variants": [
+        {"id": "benetint-lip-cheek-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "roseberry-brow-pen",
+      "name": "قلم تحديد الحواجب روز بيري",
+      "name_en": "Roseberry Brow Defining Pen",
+      "category": "eyes",
+      "description": "قلم لتحديد الحواجب ورسم خطوط دقيقة تشبه الشعيرات، مقاوم للماء. نؤكد معك الدرجة عبر واتساب.",
+      "description_en": "A waterproof brow pen for drawing fine, hair-like strokes. We confirm your shade with you on WhatsApp.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/roseberry-brow-pen.jpg", "alt": "قلم تحديد الحواجب روز بيري", "alt_en": "Roseberry Brow Defining Pen"}
+      ],
+      "variants": [
+        {"id": "roseberry-brow-pen-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "angled-detail-brush",
+      "name": "فرشاة تحديد مائلة",
+      "name_en": "Angled Detail Brush",
+      "category": "tools",
+      "description": "فرشاة مكياج برأس صغير مائل للتحديد والعمل على التفاصيل، مع مقبض وردي.",
+      "description_en": "A makeup brush with a small angled head for definition and detail work, finished with a pink handle.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/angled-detail-brush.jpg", "alt": "فرشاة تحديد مائلة", "alt_en": "Angled Detail Brush"}
+      ],
+      "variants": [
+        {"id": "angled-detail-brush-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "nose-contour-brush",
+      "name": "فرشاة تحديد الأنف",
+      "name_en": "Nose Contour Brush",
+      "category": "tools",
+      "description": "فرشاة لتوزيع ودمج الكونتور حول الأنف، بتصميم وردي.",
+      "description_en": "A pink-handled brush for applying and blending contour around the nose.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/nose-contour-brush.jpg", "alt": "فرشاة تحديد الأنف", "alt_en": "Nose Contour Brush"}
+      ],
+      "variants": [
+        {"id": "nose-contour-brush-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "foundation-brush",
+      "name": "فرشاة توزيع الفاونديشن",
+      "name_en": "Foundation Brush",
+      "category": "tools",
+      "description": "فرشاة لتوزيع الفاونديشن ودمجه على الوجه، بتصميم وردي.",
+      "description_en": "A pink-handled brush for applying and blending foundation on the face.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/foundation-brush.jpg", "alt": "فرشاة توزيع الفاونديشن", "alt_en": "Foundation Brush"}
+      ],
+      "variants": [
+        {"id": "foundation-brush-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "eyeshadow-blending-brush",
+      "name": "فرشاة دمج ظلال العيون",
+      "name_en": "Eyeshadow Blending Brush",
+      "category": "tools",
+      "description": "فرشاة برأس مستدير لدمج ظلال العيون وتنعيم الانتقالات بين الألوان، مع مقبض وردي.",
+      "description_en": "A rounded brush for blending eyeshadow and softening transitions between colours, with a pink handle.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/eyeshadow-blending-brush.jpg", "alt": "فرشاة دمج ظلال العيون", "alt_en": "Eyeshadow Blending Brush"}
+      ],
+      "variants": [
+        {"id": "eyeshadow-blending-brush-default", "price": 1.000, "available": true}
+      ]
+    },
+    {
+      "id": "blush-blending-brush",
+      "name": "فرشاة دمج الروج",
+      "name_en": "Blush Blending Brush",
+      "category": "tools",
+      "description": "فرشاة صغيرة برأس مستدير لدمج الروج والبلاشر بنعومة، مع مقبض وردي.",
+      "description_en": "A small rounded brush for softly blending blush, with a pink handle.",
+      "featured": false,
+      "images": [
+        {"src": "images/products/blush-blending-brush.jpg", "alt": "فرشاة دمج الروج في علبتها الوردية", "alt_en": "Blush blending brush in its pink box"}
+      ],
+      "variants": [
+        {"id": "blush-blending-brush-default", "price": 1.000, "available": true}
       ]
     }
   ]

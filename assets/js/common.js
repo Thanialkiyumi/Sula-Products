@@ -111,6 +111,8 @@
       var id = cleanText(p && p.id);
       if (!id) { console.warn("products.json: product #" + (index + 1) + " has no id and was skipped."); return; }
       if (seenProducts[id]) { console.warn("products.json: duplicate product id \"" + id + "\" was skipped."); return; }
+      var draft = p.status === "draft";
+      if (draft && !previewMode) { seenProducts[id] = true; return; } // not published yet
 
       var variants = [];
       (Array.isArray(p.variants) ? p.variants : []).forEach(function (v, vIndex) {
@@ -127,9 +129,12 @@
           shade: cleanText(I.pick(v, "shade")) || null,
           searchText: [v.id, v.shade, v.shade_en].join(" "),
           swatch: safeColor(v.swatch),
+          // Optional: a small photo of the real shade, cropped from the owner's product photo
+          swatchImage: v.swatchImage ? safeImageSrc(v.swatchImage) : null,
           priceBaisa: priceBaisa,
           priceTbc: priceTbc,
-          available: v.available === true && priceBaisa !== null
+          // Draft products can never be ordered, whatever "available" says
+          available: !draft && v.available === true && priceBaisa !== null
         });
       });
       if (!variants.length) { console.warn("products.json: product \"" + id + "\" has no variants and was skipped."); return; }
@@ -148,6 +153,7 @@
         description: cleanText(I.pick(p, "description")),
         featured: p.featured === true,
         sample: p.sample === true,
+        draft: draft,
         optionLabel: cleanText(I.pick(p, "optionLabel")) || t("product.optionDefault"),
         // Search works in both languages, whatever language the page is in
         searchText: [id, p.name, p.name_en, p.description, p.description_en].concat(variants.map(function (v) { return v.searchText; })).join(" "),
@@ -167,6 +173,21 @@
 
     return { categories: categories, products: products, byProduct: byProduct, byVariant: byVariant };
   }
+
+  /* ---------- Draft products and preview mode ----------
+     A product with "status": "draft" in products.json is hidden from shoppers.
+     Open any page with ?preview=1 to see drafts (marked "Preview only"; they can
+     never be added to the cart). ?preview=0 turns preview mode off again. */
+  var previewMode = (function () {
+    try {
+      var flag = new URLSearchParams(location.search).get("preview");
+      if (flag === "1") sessionStorage.setItem("sula-preview", "1");
+      if (flag === "0") sessionStorage.removeItem("sula-preview");
+      return sessionStorage.getItem("sula-preview") === "1";
+    } catch (e) {
+      return new URLSearchParams(location.search).get("preview") === "1";
+    }
+  })();
 
   function normalizeSettings(raw) {
     raw = raw || {};
@@ -406,11 +427,19 @@
     return img;
   }
 
+  // A round shade sample: the real shade photo when there is one, otherwise the colour
+  function swatchDot(v) {
+    var style = {};
+    if (v.swatch) style["background-color"] = v.swatch;
+    if (v.swatchImage) style["background-image"] = "url(\"" + v.swatchImage + "\")";
+    return el("span", { className: "swatch-dot" + (v.swatchImage ? " has-photo" : ""), style: style, "aria-hidden": "true" });
+  }
+
   // index (optional) staggers the entrance animation of cards in a grid
   function productCard(product, index) {
     var summary = priceSummary(product);
     var available = isAvailable(product);
-    var swatches = product.variants.filter(function (v) { return v.swatch; }).slice(0, 5);
+    var swatches = product.variants.filter(function (v) { return v.swatch || v.swatchImage; }).slice(0, 5);
 
     var priceNode = product.priceTbc
       ? el("span", { className: "muted price-tbc", text: t("price.tbc") })
@@ -422,14 +451,15 @@
       el("div", { className: "thumb" }, [
         imageEl(product.images[0]),
         product.sample ? el("span", { className: "badge", text: t("card.sample") }) : null,
-        available || product.priceTbc ? null : el("span", { className: "badge badge-out", text: t("card.out") })
+        product.draft ? el("span", { className: "badge badge-draft", text: t("card.draft") }) : null,
+        available || product.priceTbc || product.draft ? null : el("span", { className: "badge badge-out", text: t("card.out") })
       ]),
       el("h3", null, [el("a", { href: productUrl(product), text: product.name })]),
       el("div", { className: "meta" }, [
         priceNode,
         swatches.length
           ? el("span", { className: "swatch-row", "aria-label": t("card.options", { n: product.variants.length }) }, swatches.map(function (v) {
-              return el("span", { className: "swatch-dot", style: { background: v.swatch }, "aria-hidden": "true" });
+              return swatchDot(v);
             }))
           : null
       ]),
@@ -473,6 +503,13 @@
       container.appendChild(el("p", { className: "notice notice-sample", role: "note" }, [
         el("strong", { text: t("notice.sampleLabel") }),
         t("notice.sample")
+      ]));
+    }
+    if (previewMode) {
+      container.appendChild(el("p", { className: "notice notice-sample", role: "note" }, [
+        el("strong", { text: t("notice.previewLabel") }),
+        t("notice.preview"),
+        el("code", { dir: "ltr", text: "?preview=0" })
       ]));
     }
     if (messages && messages.length) {
@@ -552,6 +589,7 @@
     priceSummary: priceSummary,
     isAvailable: isAvailable,
     imageEl: imageEl,
+    swatchDot: swatchDot,
     storageGet: storageGet,
     storageSet: storageSet,
     checkWhatsAppNumber: checkWhatsAppNumber

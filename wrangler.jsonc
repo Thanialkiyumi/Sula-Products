@@ -6,10 +6,21 @@
   // Turns on the free address sula-products.thanialkiyumi.workers.dev
   "workers_dev": true,
   "observability": { "enabled": true },
+  // The small server behind the owner's admin page (/admin). It only answers /api/... links.
+  "main": "worker/index.js",
   "assets": {
     // The whole folder is the website (there is no build step)
     "directory": ".",
+    "binding": "ASSETS",
     // Unknown links show our "page not found" page
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    // Only these links go to the admin server; everything else is a plain file
+    "run_worker_first": ["/api/*"]
+  },
+  // Where the admin page saves changes. The password and the GitHub token are
+  // secrets added in the Cloudflare dashboard, never written here.
+  "vars": {
+    "GITHUB_REPO": "Thanialkiyumi/sula-products",
+    "GITHUB_BRANCH": "main"
   }
 }

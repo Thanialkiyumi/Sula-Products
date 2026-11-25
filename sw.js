@@ -2,7 +2,7 @@
    Pages and product data always try the internet first, so prices are
    never stale; the saved copy is only used when there is no connection.
    Change VERSION when you want every phone to drop its saved copy. */
-var VERSION = "sula-v1";
+var VERSION = "sula-v2";
 var CORE = [
   "./", "index.html", "products.html", "product.html", "cart.html",
   "assets/css/styles.css",
@@ -35,6 +35,7 @@ self.addEventListener("fetch", function (event) {
   if (request.method !== "GET") return;
   var url = new URL(request.url);
   if (url.origin !== location.origin) return; // fonts, WhatsApp and Instagram links go straight to the internet
+  if (url.pathname.indexOf("/api/") === 0 || url.pathname.indexOf("/admin") === 0) return; // the admin page is never saved offline
 
   var fresh = request.mode === "navigate" || url.pathname.indexOf("/data/") !== -1 || /\.(html|js|css)$/.test(url.pathname);
   if (fresh) {

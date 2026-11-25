@@ -2,7 +2,7 @@
 
 An Arabic, right-to-left catalog for Sula Products (Instagram [@sula__products](https://www.instagram.com/sula__products/)).
 Customers browse products, choose shades, fill a cart, and send their order to the store on WhatsApp.
-There are no online payments, customer accounts, database, or admin dashboard.
+There are no online payments, customer accounts or database. The shop owner manages products at `/admin` (see section 10).
 
 The site is plain HTML, CSS, and JavaScript. There is no build step: the files you see are the files that go online.
 
@@ -301,3 +301,17 @@ The site has a language button in the header (English / العربية). Arabic 
 * [ ] The WhatsApp message opens with the right products, prices, and customer details, and arrives on the store's phone when sent.
 * [ ] Change a price in `products.json`, reload the cart, and see the price-change message.
 * [ ] Switch to English and back: every page, the cart, and the WhatsApp message change language, and the cart stays.
+
+---
+
+## 10. The owner's admin page (/admin)
+
+The owner opens `https://sula-products.thanialkiyumi.workers.dev/admin`, types the password, and can add, edit, hide, reorder and delete products (photos, shades, prices, "price to be confirmed"), edit categories, and change the WhatsApp number, Instagram link, welcome text and delivery settings. Arabic first, with an English switch.
+
+How it works: pressing Save sends the change to `worker/index.js` (a small Cloudflare Worker that only answers `/api/...`). It checks the password, then saves `data/products.json`, `data/settings.json` and any new photos (`images/products/`) to this repository on `main` as one commit by "Sula admin". Cloudflare then republishes the site, usually within a minute or two, and the admin page says when the change is live.
+
+* It needs two secrets in Cloudflare (Workers & Pages > sula-products > Settings > Variables and Secrets), never in the code: `ADMIN_PASSWORD` and `GITHUB_TOKEN` (a fine-grained token for this repository only, with Contents: Read and write).
+* Changing `ADMIN_PASSWORD` signs everyone out. Sessions otherwise last 30 days.
+* Photos are shrunk to 1200px JPEG in the browser before upload.
+* The saved file keeps the usual layout (one line per photo and per shade, prices with 3 decimals), so hand edits and admin edits mix fine.
+* Because the owner now edits `main` directly, always pull the latest `main` before editing products by hand.

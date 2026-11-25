@@ -12,3 +12,7 @@
 
 /manifest.webmanifest
   Content-Type: application/manifest+json
+
+/admin/*
+  Cache-Control: no-cache
+  X-Robots-Tag: noindex, nofollow
